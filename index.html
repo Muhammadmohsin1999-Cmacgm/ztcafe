@@ -1,0 +1,5296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#17251f" />
+    <meta
+      name="description"
+      content="Discover desi comfort food, chai and cafe favourites at Ztram Cafe in Malkay Kalan, Sialkot, Pakistan."
+    />
+    <title>Ztram Cafe | Desi comfort, served with a little extra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #17251f;
+        --bg-raised: #1e3028;
+        --surface: #23372e;
+        --surface-soft: rgba(35, 55, 46, 0.76);
+        --text: #f7f2e8;
+        --muted: #b7c1b5;
+        --line: rgba(239, 228, 204, 0.13);
+        --gold: #e2bd71;
+        --gold-deep: #c59743;
+        --accent: #da784e;
+        --green: #8aa47e;
+        --shadow: 0 24px 80px rgba(4, 11, 7, 0.3);
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 92px;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(
+            ellipse at 87% 5%,
+            rgba(197, 151, 67, 0.1),
+            transparent 35rem
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        line-height: 1.6;
+      }
+
+      body.light {
+        color-scheme: light;
+        --bg: #f5f0e5;
+        --bg-raised: #fffaf0;
+        --surface: #fffdf7;
+        --surface-soft: rgba(255, 253, 247, 0.86);
+        --text: #27352d;
+        --muted: #687267;
+        --line: rgba(39, 53, 45, 0.13);
+        --gold: #9a6c19;
+        --gold-deep: #b78330;
+        --accent: #b95230;
+        --green: #54724d;
+        --shadow: 0 24px 80px rgba(56, 46, 27, 0.12);
+      }
+
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: var(--sans);
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button {
+        color: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -60px;
+        left: 16px;
+        z-index: 100;
+        padding: 10px 16px;
+        background: var(--gold);
+        color: #18241d;
+      }
+
+      .skip-link:focus {
+        top: 12px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        clip-path: inset(50%);
+      }
+
+      .announcement {
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.07em;
+        text-align: center;
+        padding: 8px 16px;
+      }
+
+      .announcement strong {
+        color: var(--gold);
+        font-weight: 600;
+      }
+
+      .site-header {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav-wrap {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        flex: 0 0 auto;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(226, 189, 113, 0.62);
+        border-radius: 50%;
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 1rem;
+        letter-spacing: -0.1em;
+      }
+
+      .brand-name {
+        font-family: var(--serif);
+        font-size: 1.18rem;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+      }
+
+      .brand-name span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 0.57rem;
+        font-weight: 500;
+        letter-spacing: 0.19em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        color: var(--muted);
+        font-size: 0.87rem;
+      }
+
+      .nav-links a {
+        transition: color 180ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-button,
+      .menu-toggle,
+      .cart-trigger {
+        min-width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      .cart-trigger {
+        padding: 0 15px;
+        border-color: rgba(226, 189, 113, 0.5);
+        color: var(--gold);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .cart-count {
+        min-width: 21px;
+        height: 21px;
+        display: grid;
+        place-items: center;
+        padding-inline: 5px;
+        border-radius: 50%;
+        background: var(--gold);
+        color: #17231c;
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.15rem;
+      }
+
+      .button {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 21px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 0.88rem;
+        font-weight: 700;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        background: var(--gold);
+        color: #19251e;
+      }
+
+      .button-primary:hover {
+        background: #efcf87;
+      }
+
+      .button-secondary {
+        border-color: var(--line);
+        background: rgba(255, 255, 255, 0.025);
+        color: var(--text);
+      }
+
+      .button-secondary:hover {
+        border-color: var(--gold);
+      }
+
+      .button-small {
+        min-height: 39px;
+        padding-inline: 16px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        min-height: 620px;
+        display: grid;
+        grid-template-columns: 1fr 0.94fr;
+        align-items: center;
+        gap: 54px;
+        padding-block: 64px 78px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 18px;
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 23px;
+        height: 1px;
+        content: "";
+        background: var(--gold);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      .hero h1 {
+        max-width: 670px;
+        margin-bottom: 21px;
+        font-family: var(--serif);
+        font-size: clamp(3.1rem, 6.2vw, 5.5rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 1.02;
+      }
+
+      .hero h1 em {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .hero-copy {
+        max-width: 510px;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        max-width: 460px;
+        margin-bottom: 25px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 34px;
+        color: var(--muted);
+        font-size: 0.81rem;
+      }
+
+      .hero-note .pin {
+        color: var(--gold);
+        font-size: 1.1rem;
+      }
+
+      .hero-note strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 455px;
+      }
+
+      .hero-photo {
+        position: absolute;
+        inset: 5px 25px 17px 5px;
+        overflow: hidden;
+        border: 1px solid rgba(239, 228, 204, 0.16);
+        border-radius: 190px 190px 16px 16px;
+        background:
+          linear-gradient(180deg, transparent 45%, rgba(9, 14, 10, 0.66)),
+          url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=85")
+            center 52% / cover,
+          #58664b;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-photo::before {
+        position: absolute;
+        inset: 12px;
+        border: 1px solid rgba(246, 222, 167, 0.35);
+        border-radius: inherit;
+        content: "";
+        pointer-events: none;
+      }
+
+      .hero-photo::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(
+          0deg,
+          rgba(11, 17, 12, 0.73),
+          transparent 54%
+        );
+      }
+
+      .photo-caption {
+        position: absolute;
+        z-index: 1;
+        right: 30px;
+        bottom: 29px;
+        left: 30px;
+        color: #fff9ea;
+      }
+
+      .photo-caption span {
+        display: block;
+        margin-bottom: 5px;
+        color: #f2d590;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .photo-caption strong {
+        font-family: var(--serif);
+        font-size: 1.55rem;
+        font-weight: 500;
+      }
+
+      .floating-note {
+        position: absolute;
+        z-index: 2;
+        top: 45px;
+        right: 0;
+        width: 160px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface-soft);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(15px);
+      }
+
+      .floating-note .stars {
+        color: var(--gold);
+        font-size: 0.86rem;
+        letter-spacing: 0.12em;
+      }
+
+      .floating-note strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.85rem;
+      }
+
+      .floating-note small {
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .halal-stamp {
+        position: absolute;
+        z-index: 2;
+        bottom: 5px;
+        left: -14px;
+        display: grid;
+        width: 87px;
+        height: 87px;
+        place-content: center;
+        border: 1px solid rgba(226, 189, 113, 0.68);
+        border-radius: 50%;
+        background: var(--bg-raised);
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 1.15rem;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .halal-stamp small {
+        display: block;
+        margin-top: 5px;
+        font-family: var(--sans);
+        font-size: 0.52rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .trust-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-block: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.016);
+      }
+
+      .trust-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        min-height: 78px;
+        padding: 16px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .trust-item + .trust-item {
+        border-left: 1px solid var(--line);
+      }
+
+      .trust-icon {
+        color: var(--gold);
+        font-size: 1.2rem;
+      }
+
+      .section {
+        padding-block: 100px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+
+      .section-heading h2,
+      .story h2,
+      .visit h2 {
+        max-width: 650px;
+        margin-bottom: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.25rem, 4vw, 3.5rem);
+        font-weight: 500;
+        letter-spacing: -0.045em;
+        line-height: 1.1;
+      }
+
+      .section-heading .eyebrow {
+        margin-bottom: 11px;
+      }
+
+      .section-intro {
+        max-width: 420px;
+        margin-bottom: 2px;
+        color: var(--muted);
+        font-size: 0.91rem;
+      }
+
+      .specials {
+        padding-top: 34px;
+      }
+
+      .special-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+      }
+
+      .special-card {
+        position: relative;
+        min-height: 225px;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(13, 19, 13, 0.83),
+            rgba(13, 19, 13, 0.06)
+          ),
+          url("https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80")
+            center 54% / cover,
+          #765a36;
+      }
+
+      .special-card:nth-child(2) {
+        background:
+          linear-gradient(90deg, rgba(13, 19, 13, 0.8), rgba(13, 19, 13, 0.1)),
+          url("https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=900&q=80")
+            center / cover,
+          #7d6346;
+      }
+
+      .special-card > div {
+        max-width: 340px;
+        color: #fff9ed;
+      }
+
+      .special-card span {
+        color: #f1d18d;
+        font-size: 0.69rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .special-card h3 {
+        margin: 7px 0;
+        font-family: var(--serif);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.12;
+      }
+
+      .special-card p {
+        margin: 0;
+        color: rgba(255, 249, 237, 0.8);
+        font-size: 0.83rem;
+      }
+
+      .menu-section {
+        background: var(--bg-raised);
+      }
+
+      .menu-tools {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 26px;
+      }
+
+      .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .category-button {
+        min-height: 39px;
+        padding: 0 15px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 0.79rem;
+        transition: 180ms ease;
+      }
+
+      .category-button:hover,
+      .category-button.active {
+        border-color: var(--gold);
+        background: rgba(226, 189, 113, 0.1);
+        color: var(--gold);
+      }
+
+      .search-wrap {
+        position: relative;
+        width: min(100%, 245px);
+      }
+
+      .search-wrap span {
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        color: var(--muted);
+        transform: translateY(-50%);
+      }
+
+      .search-wrap input {
+        width: 100%;
+        height: 41px;
+        padding: 0 13px 0 36px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 0.82rem;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 17px;
+      }
+
+      .dish-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: var(--surface);
+        transition:
+          transform 200ms ease,
+          border-color 200ms ease;
+      }
+
+      .dish-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(226, 189, 113, 0.45);
+      }
+
+      .dish-photo {
+        position: relative;
+        height: 170px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse at 50% 52%,
+            rgba(238, 204, 141, 0.68),
+            transparent 25%
+          ),
+          linear-gradient(135deg, #4c3628, #b36f3c 48%, #543929);
+      }
+
+      .dish-photo::before {
+        position: absolute;
+        width: 155px;
+        height: 155px;
+        border: 1px solid rgba(255, 250, 233, 0.32);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 8px rgba(255, 250, 233, 0.05),
+          0 0 0 18px rgba(255, 250, 233, 0.04),
+          0 13px 32px rgba(0, 0, 0, 0.24);
+        content: "";
+      }
+
+      .dish-photo::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          140deg,
+          rgba(255, 248, 221, 0.07),
+          transparent 45%
+        );
+        content: "";
+      }
+
+      .dish-emoji {
+        z-index: 1;
+        filter: drop-shadow(0 8px 9px rgba(26, 17, 8, 0.32));
+        font-size: 4.3rem;
+        transform: rotate(-8deg);
+        transition: transform 250ms ease;
+      }
+
+      .dish-card:hover .dish-emoji {
+        transform: rotate(0) scale(1.08);
+      }
+
+      .dish-card[data-id="chicken-karahi"] .dish-photo,
+      .dish-card[data-id="seekh-kebab"] .dish-photo {
+        background:
+          radial-gradient(
+            ellipse at 50% 52%,
+            rgba(238, 204, 141, 0.63),
+            transparent 25%
+          ),
+          linear-gradient(135deg, #302b20, #8c4b2e 50%, #3e3527);
+      }
+
+      .dish-card[data-id="masala-chai"] .dish-photo,
+      .dish-card[data-id="lassi"] .dish-photo {
+        background:
+          radial-gradient(
+            ellipse at 50% 52%,
+            rgba(249, 221, 161, 0.8),
+            transparent 25%
+          ),
+          linear-gradient(135deg, #33453a, #9c7951 50%, #3c4739);
+      }
+
+      .dish-card[data-id="gulab-jamun"] .dish-photo,
+      .dish-card[data-id="kheer"] .dish-photo {
+        background:
+          radial-gradient(
+            ellipse at 50% 52%,
+            rgba(244, 206, 137, 0.71),
+            transparent 25%
+          ),
+          linear-gradient(135deg, #492d29, #a55f46 50%, #4d3327);
+      }
+
+      .dish-badge {
+        position: absolute;
+        z-index: 2;
+        top: 12px;
+        left: 12px;
+        padding: 5px 9px;
+        border-radius: 999px;
+        background: var(--gold);
+        color: #1a251d;
+        font-size: 0.63rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .favourite {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+        background: rgba(20, 26, 21, 0.48);
+        color: #fff;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .favourite[aria-pressed="true"] {
+        background: #fff0e9;
+        color: #c65048;
+      }
+
+      .dish-info {
+        padding: 16px 15px 15px;
+      }
+
+      .dish-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 9px;
+        margin-bottom: 5px;
+      }
+
+      .dish-type {
+        color: var(--green);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .dish-rating {
+        color: var(--gold);
+        font-size: 0.72rem;
+      }
+
+      .dish-info h3 {
+        margin: 0 0 4px;
+        font-family: var(--serif);
+        font-size: 1.16rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .dish-info p {
+        min-height: 39px;
+        margin-bottom: 14px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        line-height: 1.55;
+      }
+
+      .dish-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 9px;
+      }
+
+      .dish-price {
+        color: var(--gold);
+        font-size: 0.94rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .price-note {
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 0.74rem;
+      }
+
+      .empty-results {
+        grid-column: 1 / -1;
+        padding: 36px;
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 0.88fr 1fr;
+        align-items: center;
+        gap: 75px;
+      }
+
+      .story-visual {
+        min-height: 390px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background:
+          linear-gradient(0deg, rgba(15, 21, 15, 0.15), rgba(15, 21, 15, 0.15)),
+          url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1100&q=80")
+            center / cover,
+          #705c40;
+      }
+
+      .story-seal {
+        width: 120px;
+        height: 120px;
+        display: grid;
+        place-content: center;
+        border: 1px solid rgba(255, 246, 221, 0.7);
+        border-radius: 50%;
+        background: rgba(23, 37, 31, 0.76);
+        color: #f6db9c;
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        line-height: 1.2;
+        text-align: center;
+        backdrop-filter: blur(5px);
+      }
+
+      .story-copy > p:not(.eyebrow) {
+        max-width: 510px;
+        margin: 19px 0 25px;
+        color: var(--muted);
+      }
+
+      .story-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin: 24px 0 28px;
+      }
+
+      .story-point {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .story-point span {
+        color: var(--gold);
+      }
+
+      .quote-section {
+        padding-top: 0;
+      }
+
+      .quote-card {
+        position: relative;
+        max-width: 820px;
+        margin-inline: auto;
+        padding: 43px 50px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: var(--surface);
+        text-align: center;
+      }
+
+      .quote-mark {
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 3rem;
+        line-height: 0.9;
+      }
+
+      .quote-card blockquote {
+        max-width: 670px;
+        margin: 16px auto 20px;
+        font-family: var(--serif);
+        font-size: clamp(1.35rem, 2.8vw, 2rem);
+        line-height: 1.4;
+      }
+
+      .quote-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .visit {
+        padding: 72px 0;
+        border-top: 1px solid var(--line);
+        background:
+          radial-gradient(
+            ellipse at 90% 50%,
+            rgba(226, 189, 113, 0.09),
+            transparent 30rem
+          ),
+          var(--bg-raised);
+      }
+
+      .visit-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        align-items: center;
+        gap: 48px;
+      }
+
+      .visit-copy > p:not(.eyebrow) {
+        max-width: 490px;
+        margin: 17px 0 24px;
+        color: var(--muted);
+      }
+
+      .visit-card {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface-soft);
+      }
+
+      .visit-row {
+        display: flex;
+        gap: 13px;
+        padding: 13px 0;
+      }
+
+      .visit-row + .visit-row {
+        border-top: 1px solid var(--line);
+      }
+
+      .visit-row > span {
+        color: var(--gold);
+        font-size: 1.15rem;
+      }
+
+      .visit-row strong {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 0.84rem;
+      }
+
+      .visit-row small {
+        color: var(--muted);
+        font-size: 0.77rem;
+      }
+
+      .footer {
+        padding-block: 30px;
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: var(--muted);
+        font-size: 0.77rem;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 19px;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+      }
+
+      .portal-section {
+        padding-block: 88px;
+        border-block: 1px solid var(--line);
+        background:
+          radial-gradient(
+            ellipse at 12% 10%,
+            rgba(226, 189, 113, 0.08),
+            transparent 34rem
+          ),
+          var(--bg-raised);
+      }
+
+      .portal-cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .portal-card {
+        display: flex;
+        min-height: 250px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface-soft);
+      }
+
+      .portal-card-icon {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        margin-bottom: 19px;
+        border: 1px solid rgba(226, 189, 113, 0.45);
+        border-radius: 13px;
+        color: var(--gold);
+        font-size: 1.35rem;
+      }
+
+      .portal-card h3 {
+        margin-bottom: 7px;
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+
+      .portal-card p {
+        flex: 1;
+        margin-bottom: 19px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .portal-card .button {
+        width: 100%;
+      }
+
+      .portal-card-actions {
+        display: grid;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .portal-preview-note {
+        margin: 20px 0 0;
+        padding: 13px 15px;
+        border: 1px solid rgba(226, 189, 113, 0.27);
+        border-radius: 9px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .portal-preview-note strong {
+        color: var(--gold);
+      }
+
+      .portal-dashboard {
+        margin-top: 28px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--bg);
+        box-shadow: var(--shadow);
+      }
+
+      .portal-dashboard[hidden] {
+        display: none;
+      }
+
+      .portal-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 22px 25px;
+        border-bottom: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .portal-topbar h3 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.55rem;
+        font-weight: 500;
+      }
+
+      .portal-topbar p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+      }
+
+      .portal-top-actions {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .portal-auth-status {
+        color: var(--muted);
+        font-size: 0.73rem;
+      }
+
+      .auth-mode-toggle {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .auth-password-help {
+        color: var(--muted);
+        font-size: 0.68rem;
+      }
+
+      .portal-role-select {
+        min-height: 38px;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .portal-tabs {
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+        padding: 10px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .portal-tab {
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 7px 13px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 0.76rem;
+        font-weight: 600;
+      }
+
+      .portal-tab[aria-selected="true"] {
+        border-color: rgba(226, 189, 113, 0.48);
+        background: rgba(226, 189, 113, 0.1);
+        color: var(--gold);
+      }
+
+      .portal-content {
+        min-height: 320px;
+        padding: 24px;
+      }
+
+      .portal-content h4 {
+        margin: 0 0 5px;
+        font-family: var(--serif);
+        font-size: 1.25rem;
+      }
+
+      .portal-subtitle {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .portal-kpis {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .portal-kpi {
+        padding: 15px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--surface-soft);
+      }
+
+      .portal-kpi span {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--muted);
+        font-size: 0.7rem;
+      }
+
+      .portal-kpi strong {
+        color: var(--gold);
+        font-size: 1.22rem;
+      }
+
+      .portal-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .portal-panel {
+        padding: 17px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: var(--surface-soft);
+      }
+
+      .portal-panel h5 {
+        margin: 0 0 9px;
+        font-size: 0.87rem;
+      }
+
+      .portal-panel p,
+      .portal-panel li {
+        color: var(--muted);
+        font-size: 0.77rem;
+      }
+
+      .portal-panel ul {
+        margin: 0;
+        padding-left: 19px;
+      }
+
+      .portal-table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+      }
+
+      .portal-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.77rem;
+        text-align: left;
+      }
+
+      .portal-table th,
+      .portal-table td {
+        min-width: 105px;
+        padding: 11px 13px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: middle;
+      }
+
+      .portal-table th {
+        color: var(--muted);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .portal-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .portal-status {
+        display: inline-flex;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(138, 164, 126, 0.14);
+        color: var(--green);
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      .portal-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .portal-action {
+        min-height: 30px;
+        padding: 5px 9px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 0.68rem;
+      }
+
+      .portal-action:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+
+      .portal-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+        margin-top: 14px;
+      }
+
+      .portal-form .field label {
+        font-size: 0.7rem;
+      }
+
+      .portal-inline-note {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.7rem;
+      }
+
+      .overlay {
+        position: fixed;
+        z-index: 40;
+        inset: 0;
+        visibility: hidden;
+        background: rgba(5, 10, 7, 0.62);
+        opacity: 0;
+        transition:
+          opacity 200ms ease,
+          visibility 200ms ease;
+      }
+
+      .overlay.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .cart-drawer {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(440px, 100%);
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        border-left: 1px solid var(--line);
+        background: var(--bg-raised);
+        box-shadow: var(--shadow);
+        transform: translateX(102%);
+        transition: transform 240ms ease;
+      }
+
+      .cart-drawer.open {
+        transform: translateX(0);
+      }
+
+      .drawer-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .drawer-heading h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.75rem;
+        font-weight: 500;
+      }
+
+      .close-button {
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      .cart-items {
+        flex: 1;
+        overflow-y: auto;
+        padding-block: 12px;
+      }
+
+      .cart-empty {
+        padding: 36px 12px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .cart-empty span {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 2rem;
+      }
+
+      .cart-line {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cart-line h3 {
+        margin: 0 0 3px;
+        font-family: var(--serif);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .cart-line small {
+        color: var(--muted);
+      }
+
+      .cart-line-total {
+        align-self: center;
+        color: var(--gold);
+        font-size: 0.87rem;
+        font-weight: 700;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 9px;
+      }
+
+      .quantity-control button {
+        width: 27px;
+        height: 27px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .quantity-control span {
+        min-width: 13px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      .cart-summary {
+        padding-top: 15px;
+        border-top: 1px solid var(--line);
+      }
+
+      .coupon-row {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .coupon-row input {
+        min-width: 0;
+        flex: 1;
+        height: 40px;
+        padding-inline: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--bg);
+        color: var(--text);
+        text-transform: uppercase;
+      }
+
+      .coupon-row button {
+        padding-inline: 13px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--gold);
+        cursor: pointer;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-block: 7px;
+        color: var(--muted);
+        font-size: 0.83rem;
+      }
+
+      .summary-row.total {
+        margin-top: 13px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        color: var(--text);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .summary-row.total strong {
+        color: var(--gold);
+      }
+
+      .cart-summary > .button {
+        width: 100%;
+        margin-top: 13px;
+      }
+
+      .demo-disclaimer {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.69rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .dialog-backdrop {
+        position: fixed;
+        z-index: 60;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background: rgba(5, 10, 7, 0.7);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+      }
+
+      .dialog-backdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .dialog {
+        width: min(520px, 100%);
+        max-height: min(90vh, 800px);
+        overflow: auto;
+        padding: 27px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--bg-raised);
+        box-shadow: var(--shadow);
+        transform: translateY(8px);
+        transition: transform 180ms ease;
+      }
+
+      .dialog-backdrop.open .dialog {
+        transform: translateY(0);
+      }
+
+      .dialog h2 {
+        margin: 0 0 5px;
+        font-family: var(--serif);
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      .dialog-intro {
+        margin-bottom: 19px;
+        color: var(--muted);
+        font-size: 0.83rem;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      .field label {
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 600;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        min-height: 43px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 0.84rem;
+      }
+
+      .field textarea {
+        min-height: 78px;
+        resize: vertical;
+      }
+
+      .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 9px;
+        margin-top: 18px;
+      }
+
+      .toast {
+        position: fixed;
+        z-index: 80;
+        right: 20px;
+        bottom: 20px;
+        max-width: min(390px, calc(100% - 40px));
+        padding: 13px 17px;
+        border: 1px solid rgba(226, 189, 113, 0.45);
+        border-radius: 10px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        color: var(--text);
+        font-size: 0.84rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: 180ms ease;
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal {
+        animation: rise-in 700ms both;
+      }
+
+      .reveal.delay-1 {
+        animation-delay: 100ms;
+      }
+
+      .reveal.delay-2 {
+        animation-delay: 180ms;
+      }
+
+      @keyframes rise-in {
+        from {
+          opacity: 0;
+          transform: translateY(17px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 980px) {
+        .nav-links {
+          gap: 16px;
+          font-size: 0.81rem;
+        }
+
+        .hero {
+          gap: 30px;
+        }
+
+        .hero-visual {
+          min-height: 410px;
+        }
+
+        .menu-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .story {
+          gap: 42px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          width: min(100% - 34px, 560px);
+        }
+
+        .nav-wrap {
+          min-height: 68px;
+          gap: 10px;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 0;
+          left: 0;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 9px 17px 17px;
+          border-bottom: 1px solid var(--line);
+          background: var(--bg-raised);
+        }
+
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-links a {
+          padding: 11px 3px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links a:last-child {
+          border-bottom: 0;
+        }
+
+        .hero {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 27px;
+          padding-block: 55px 56px;
+        }
+
+        .hero-copy {
+          order: 0;
+        }
+
+        .hero h1 {
+          max-width: 540px;
+          font-size: clamp(3.1rem, 13vw, 5rem);
+        }
+
+        .hero-visual {
+          min-height: min(110vw, 480px);
+          margin-inline: 10px;
+        }
+
+        .hero-photo {
+          inset: 0 15px 15px 0;
+        }
+
+        .floating-note {
+          top: 30px;
+          right: -7px;
+          width: 144px;
+        }
+
+        .trust-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .trust-item {
+          min-height: 57px;
+          justify-content: flex-start;
+          padding-inline: 9px;
+        }
+
+        .trust-item + .trust-item {
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .section {
+          padding-block: 72px;
+        }
+
+        .portal-section {
+          padding-block: 68px;
+        }
+
+        .portal-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .portal-card {
+          min-height: 0;
+        }
+
+        .portal-card-actions {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .portal-topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 19px;
+        }
+
+        .portal-content {
+          padding: 17px;
+        }
+
+        .portal-kpis {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .portal-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-heading {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 13px;
+          margin-bottom: 24px;
+        }
+
+        .section-intro {
+          max-width: 500px;
+        }
+
+        .specials {
+          padding-top: 20px;
+        }
+
+        .special-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .special-card {
+          min-height: 205px;
+        }
+
+        .menu-tools {
+          align-items: flex-start;
+          flex-direction: column-reverse;
+        }
+
+        .search-wrap {
+          width: 100%;
+        }
+
+        .category-list {
+          flex-wrap: nowrap;
+          width: calc(100vw - 34px);
+          overflow-x: auto;
+          padding-bottom: 4px;
+        }
+
+        .category-button {
+          flex: 0 0 auto;
+        }
+
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 11px;
+        }
+
+        .dish-photo {
+          height: 145px;
+        }
+
+        .dish-info {
+          padding: 13px 11px;
+        }
+
+        .dish-info h3 {
+          font-size: 1.04rem;
+        }
+
+        .dish-info p {
+          min-height: 56px;
+          font-size: 0.72rem;
+        }
+
+        .dish-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .dish-bottom .button {
+          width: 100%;
+        }
+
+        .story {
+          grid-template-columns: 1fr;
+          gap: 29px;
+        }
+
+        .story-visual {
+          min-height: 285px;
+        }
+
+        .quote-card {
+          padding: 34px 22px;
+        }
+
+        .visit {
+          padding-block: 62px;
+        }
+
+        .visit-grid {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .brand {
+          gap: 8px;
+        }
+
+        .brand-mark {
+          width: 35px;
+          height: 35px;
+        }
+
+        .brand-name {
+          font-size: 1rem;
+        }
+
+        .icon-button {
+          display: none;
+        }
+
+        .cart-trigger {
+          min-width: 76px;
+          padding-inline: 10px;
+          font-size: 0.78rem;
+        }
+
+        .portal-form {
+          grid-template-columns: 1fr;
+        }
+
+        .dish-photo {
+          height: 125px;
+        }
+
+        .dish-emoji {
+          font-size: 3.55rem;
+        }
+
+        .dish-badge {
+          top: 8px;
+          left: 8px;
+          padding: 4px 7px;
+          font-size: 0.56rem;
+        }
+
+        .favourite {
+          top: 7px;
+          right: 7px;
+          width: 30px;
+          height: 30px;
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .field.full {
+          grid-column: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="announcement">
+      A little desi comfort, right here in
+      <strong>Malkay Kalan, Sialkot</strong>
+    </div>
+
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="brand" href="#home" aria-label="Ztram Cafe home">
+          <span class="brand-mark" aria-hidden="true">ZC</span>
+          <span class="brand-name"
+            >Ztram Cafe<span>Sialkot · Pakistan</span></span
+          >
+        </a>
+
+        <nav
+          class="nav-links"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#menu">Our menu</a>
+          <a href="#portals">Portals</a>
+          <a href="#story">Our story</a>
+          <a href="#visit">Find us</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button"
+            type="button"
+            id="theme-toggle"
+            aria-label="Switch to light theme"
+            title="Toggle theme"
+          >
+            ☼
+          </button>
+          <button
+            class="cart-trigger"
+            type="button"
+            id="open-cart"
+            aria-label="Open shopping cart"
+          >
+            <span aria-hidden="true">🛍</span> Cart
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            id="menu-toggle"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="shell hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">A taste of home, with a little extra</p>
+          <h1 class="reveal delay-1" id="hero-title">
+            Desi comfort.<br /><em>Cafe soul.</em>
+          </h1>
+          <p class="reveal delay-2">
+            From hot, flaky parathas to a proper cup of chai, pull up a chair
+            and make yourself at home. Your neighbourhood cafe in Malkay Kalan.
+          </p>
+          <div class="hero-actions reveal delay-2">
+            <a class="button button-primary" href="#menu"
+              >Explore the menu <span aria-hidden="true">↗</span></a
+            >
+            <button
+              class="button button-secondary"
+              type="button"
+              data-open-reservation
+            >
+              Reserve a table
+            </button>
+          </div>
+          <div class="hero-note">
+            <span class="pin" aria-hidden="true">⌖</span>
+            <span
+              ><strong>Malkay Kalan</strong> · Sialkot, Punjab, Pakistan</span
+            >
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="A warm welcome to Ztram Cafe">
+          <div class="hero-photo">
+            <div class="photo-caption">
+              <span>Fresh from our kitchen</span>
+              <strong>Good food. Good company.</strong>
+            </div>
+          </div>
+          <div
+            class="floating-note"
+            aria-label="A little something for everyone"
+          >
+            <div class="stars" aria-hidden="true">✦ ✦ ✦</div>
+            <strong>Made with heart</strong>
+            <small>Comfort food, the desi way</small>
+          </div>
+          <div class="halal-stamp" aria-label="Halal options">
+            حلال<small>Halal options</small>
+          </div>
+        </div>
+      </section>
+
+      <div class="trust-strip" aria-label="What makes us special">
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">✳</span> Comforting desi
+          favourites
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">♨</span> Made fresh to
+          order
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">♡</span> A welcoming local
+          cafe
+        </div>
+      </div>
+
+      <section class="shell section specials" aria-labelledby="special-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Something to look forward to</p>
+            <h2 id="special-title">A little moment of delicious.</h2>
+          </div>
+          <p class="section-intro">
+            There is always room for a favourite. Here are a couple of ours.
+          </p>
+        </div>
+        <div class="special-grid">
+          <article class="special-card">
+            <div>
+              <span>Made for sharing</span>
+              <h3>Weekend Biryani Feast</h3>
+              <p>Fragrant, warming and best enjoyed around a table together.</p>
+            </div>
+          </article>
+          <article class="special-card">
+            <div>
+              <span>Chai o’clock</span>
+              <h3>Chai &amp; a catch-up</h3>
+              <p>Take a pause, pour a cup and stay a little longer.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section menu-section"
+        id="menu"
+        aria-labelledby="menu-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A seat at our table</p>
+              <h2 id="menu-title">The menu, made for cravings.</h2>
+            </div>
+            <p class="section-intro">
+              Everyday desi favourites, satisfying snacks and something sweet to
+              finish.
+            </p>
+          </div>
+
+          <div class="menu-tools">
+            <div
+              class="category-list"
+              role="group"
+              aria-label="Filter menu by category"
+              id="category-list"
+            ></div>
+            <label class="search-wrap">
+              <span aria-hidden="true">⌕</span>
+              <input
+                type="search"
+                id="menu-search"
+                placeholder="Find your favourite..."
+                aria-label="Search menu"
+              />
+            </label>
+          </div>
+
+          <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+          <p class="price-note">
+            Menu and prices shown in Pakistani Rupees (PKR). Sample prices for
+            this website preview; please confirm the final menu with Ztram Cafe.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="shell section story"
+        id="story"
+        aria-labelledby="story-title"
+      >
+        <div
+          class="story-visual"
+          role="img"
+          aria-label="A cosy cafe dining room"
+        >
+          <div class="story-seal">A little<br />taste of<br />home</div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">More than just a meal</p>
+          <h2 id="story-title">Your neighbourhood table in Sialkot.</h2>
+          <p>
+            Ztram Cafe is imagined as a welcoming spot in Malkay Kalan where
+            familiar Pakistani flavours meet the relaxed feel of a local cafe.
+            Come with family, catch up with a friend or just treat yourself to
+            one more cup of chai.
+          </p>
+          <div class="story-points">
+            <div class="story-point">
+              <span aria-hidden="true">✦</span> Desi favourites
+            </div>
+            <div class="story-point">
+              <span aria-hidden="true">✦</span> A relaxed welcome
+            </div>
+            <div class="story-point">
+              <span aria-hidden="true">✦</span> PKR menu pricing
+            </div>
+            <div class="story-point">
+              <span aria-hidden="true">✦</span> Proudly local
+            </div>
+          </div>
+          <button
+            class="button button-secondary"
+            type="button"
+            data-open-reservation
+          >
+            Save me a seat
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="shell section quote-section"
+        aria-label="A note from our table"
+      >
+        <div class="quote-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <blockquote>
+            Some of the best conversations start with “shall we order another
+            chai?”
+          </blockquote>
+          <p>A little Ztram Cafe feeling</p>
+        </div>
+      </section>
+
+      <section
+        class="portal-section"
+        id="portals"
+        aria-labelledby="portals-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Your Ztram account</p>
+              <h2 id="portals-title">A portal for every part of the cafe.</h2>
+            </div>
+            <p class="section-intro">
+              Customer services, staff tools and business management each have
+              their own home.
+            </p>
+          </div>
+
+          <div class="portal-cards">
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">♡</span>
+              <h3>Customer portal</h3>
+              <p>
+                Orders, reservations, favourites, rewards, profile and customer
+                support in one place.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="customer"
+                >
+                  Customer sign up / login
+                </button>
+              </div>
+            </article>
+
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">♨</span>
+              <h3>Staff portal</h3>
+              <p>
+                Kitchen queue, waiter tables, delivery tasks, cashier workflow
+                and attendance tools.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="staff"
+                >
+                  Staff login
+                </button>
+              </div>
+            </article>
+
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">✦</span>
+              <h3>Admin &amp; manager portal</h3>
+              <p>
+                Operations overview, menu, orders, reservations, team,
+                inventory, promotions and security.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="admin"
+                >
+                  Business team login
+                </button>
+              </div>
+            </article>
+
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">◆</span>
+              <h3>Owner portal</h3>
+              <p>
+                Private owner access to assign administrators, managers, HR,
+                accounts and manager responsibilities.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="owner"
+                >
+                  Owner login
+                </button>
+              </div>
+            </article>
+
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">◎</span>
+              <h3>Human resources portal</h3>
+              <p>
+                Hiring pipeline, interviews, employee records, onboarding,
+                offboarding, attendance and payroll handoff.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="hr"
+                  data-portal-label="HR login"
+                >
+                  HR team login
+                </button>
+              </div>
+            </article>
+
+            <article class="portal-card">
+              <span class="portal-card-icon" aria-hidden="true">₨</span>
+              <h3>Accounts portal</h3>
+              <p>
+                Review manually submitted payroll, approve eligible records, and
+                record completed payments.
+              </p>
+              <div class="portal-card-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-auth="accountant"
+                  data-portal-label="Accounts login"
+                >
+                  Accounts team login
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <p class="portal-preview-note" id="portal-availability-note">
+            Sign in with the account assigned to each portal. Live records and
+            business actions require Firebase database, App Check and backend
+            deployment; these services are not available until configured.
+          </p>
+
+          <section
+            class="portal-dashboard"
+            id="portal-dashboard"
+            aria-label="Authenticated portal dashboard"
+            hidden
+          >
+            <div class="portal-topbar">
+              <div>
+                <h3 id="portal-heading">Portal dashboard</h3>
+                <p id="portal-subheading"></p>
+              </div>
+              <div class="portal-top-actions">
+                <span
+                  class="portal-auth-status"
+                  id="portal-auth-status"
+                  hidden
+                ></span>
+                <button
+                  class="button button-secondary button-small"
+                  type="button"
+                  id="portal-sign-out"
+                  hidden
+                >
+                  Sign out
+                </button>
+                <button
+                  class="button button-secondary button-small"
+                  type="button"
+                  id="close-portal"
+                >
+                  Close preview
+                </button>
+              </div>
+            </div>
+            <nav
+              class="portal-tabs"
+              id="portal-tabs"
+              aria-label="Portal sections"
+            ></nav>
+            <div
+              class="portal-content"
+              id="portal-content"
+              aria-live="polite"
+            ></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div class="shell visit-grid">
+          <div class="visit-copy">
+            <p class="eyebrow">Come on over</p>
+            <h2 id="visit-title">Your table is waiting.</h2>
+            <p>
+              Find us in Malkay Kalan, Sialkot. We would love to welcome you in.
+            </p>
+            <div class="hero-actions">
+              <button
+                class="button button-primary"
+                type="button"
+                data-open-reservation
+              >
+                Reserve a table
+              </button>
+              <a
+                class="button button-secondary"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Malkay+Kalan%2C+Sialkot%2C+Pakistan"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open in Maps ↗</a
+              >
+            </div>
+          </div>
+          <div class="visit-card">
+            <div class="visit-row">
+              <span aria-hidden="true">⌖</span>
+              <div>
+                <strong>Find us</strong
+                ><small>Malkay Kalan, Sialkot, Punjab, Pakistan</small>
+              </div>
+            </div>
+            <div class="visit-row">
+              <span aria-hidden="true">◷</span>
+              <div>
+                <strong>Opening hours</strong
+                ><small
+                  >Please contact the cafe to confirm today's hours.</small
+                >
+              </div>
+            </div>
+            <div class="visit-row">
+              <span aria-hidden="true">☏</span>
+              <div>
+                <strong>Questions or bookings?</strong
+                ><small>Add the cafe's phone number here when confirmed.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">ZC</span>
+          <span class="brand-name"
+            >Ztram Cafe<span>Sialkot · Pakistan</span></span
+          >
+        </a>
+        <span
+          >Made for good food and better company ·
+          <span id="current-year"></span
+        ></span>
+        <div class="footer-links">
+          <a href="#menu">Menu</a>
+          <a href="#story">Our story</a>
+          <a href="#visit">Find us</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay" id="cart-overlay"></div>
+    <aside
+      class="cart-drawer"
+      id="cart-drawer"
+      aria-labelledby="cart-heading"
+      aria-hidden="true"
+    >
+      <div class="drawer-heading">
+        <h2 id="cart-heading">Your order</h2>
+        <button
+          class="close-button"
+          type="button"
+          id="close-cart"
+          aria-label="Close cart"
+        >
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-summary">
+        <div class="coupon-row">
+          <input
+            id="coupon-input"
+            type="text"
+            placeholder="Coupon code"
+            aria-label="Coupon code"
+          />
+          <button type="button" id="apply-coupon">Apply</button>
+        </div>
+        <div class="summary-row">
+          <span>Subtotal</span><span id="cart-subtotal">Rs 0</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span><span id="cart-delivery">Rs 0</span>
+        </div>
+        <div class="summary-row">
+          <span>Discount</span><span id="cart-discount">Rs 0</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span><strong id="cart-total">Rs 0</strong>
+        </div>
+        <button
+          class="button button-primary"
+          type="button"
+          id="checkout-button"
+        >
+          Continue to checkout
+        </button>
+        <p class="demo-disclaimer">
+          Preview only: this cart does not submit a real order or payment.
+          Prices, delivery availability and coupon details require cafe
+          confirmation.
+        </p>
+      </div>
+    </aside>
+
+    <div class="dialog-backdrop" id="reservation-dialog" aria-hidden="true">
+      <section
+        class="dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="reservation-title"
+      >
+        <h2 id="reservation-title">Save your seat.</h2>
+        <p class="dialog-intro">
+          Tell us what you have in mind. This is a preview form and will not
+          contact the cafe.
+        </p>
+        <form id="reservation-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="reservation-name">Your name</label>
+              <input
+                id="reservation-name"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="reservation-phone">Phone number</label>
+              <input
+                id="reservation-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="reservation-date">Date</label>
+              <input id="reservation-date" name="date" type="date" required />
+            </div>
+            <div class="field">
+              <label for="reservation-time">Time</label>
+              <input id="reservation-time" name="time" type="time" required />
+            </div>
+            <div class="field">
+              <label for="reservation-guests">Guests</label>
+              <select id="reservation-guests" name="guests" required>
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+                <option value="7+">7 or more</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reservation-seating">Seating preference</label>
+              <select id="reservation-seating" name="seating">
+                <option>Any available seating</option>
+                <option>Indoor</option>
+                <option>Outdoor</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="reservation-note">Anything else? (optional)</label>
+              <textarea
+                id="reservation-note"
+                name="note"
+                placeholder="A special occasion, accessibility request..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="dialog-actions">
+            <button
+              class="button button-secondary button-small"
+              type="button"
+              data-close-dialog
+            >
+              Cancel
+            </button>
+            <button class="button button-primary button-small" type="submit">
+              Save preview booking
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="dialog-backdrop" id="checkout-dialog" aria-hidden="true">
+      <section
+        class="dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="checkout-title"
+      >
+        <h2 id="checkout-title">A few details.</h2>
+        <p class="dialog-intro">
+          Checkout preview only. No order will be sent and no payment will be
+          taken.
+        </p>
+        <form id="checkout-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="checkout-name">Full name</label>
+              <input
+                id="checkout-name"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="checkout-phone">Phone number</label>
+              <input
+                id="checkout-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+              />
+            </div>
+            <div class="field full">
+              <label for="checkout-email">Email (optional)</label>
+              <input
+                id="checkout-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+              />
+            </div>
+            <div class="field full">
+              <label for="checkout-address">Delivery address in Sialkot</label>
+              <textarea
+                id="checkout-address"
+                name="address"
+                autocomplete="street-address"
+                required
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="checkout-method">Preview fulfilment</label>
+              <select id="checkout-method" name="method">
+                <option>Delivery preview</option>
+                <option>Pickup preview</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="checkout-payment">Payment preview</label>
+              <select id="checkout-payment" name="payment">
+                <option>Cash on delivery (preview)</option>
+                <option>Pay at cafe (preview)</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="checkout-notes">Order notes (optional)</label>
+              <textarea
+                id="checkout-notes"
+                name="notes"
+                placeholder="Anything the kitchen should know?"
+              ></textarea>
+            </div>
+          </div>
+          <div class="dialog-actions">
+            <button
+              class="button button-secondary button-small"
+              type="button"
+              data-close-dialog
+            >
+              Back to cart
+            </button>
+            <button class="button button-primary button-small" type="submit">
+              Place demo order
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="dialog-backdrop" id="auth-dialog" aria-hidden="true">
+      <section
+        class="dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="auth-title"
+      >
+        <h2 id="auth-title">Your Ztram account</h2>
+        <p class="dialog-intro" id="auth-intro">
+          Sign in with your verified account to continue to your portal.
+        </p>
+        <div class="portal-preview-note" id="auth-security-note">
+          Staff, manager, HR, accounts and admin identities must be created and
+          assigned by an authorized administrator. Never share your password or
+          verification code.
+        </div>
+        <form id="auth-form">
+          <div class="form-grid">
+            <div class="field full" id="auth-name-field" hidden>
+              <label for="auth-name">Full name</label>
+              <input
+                id="auth-name"
+                name="name"
+                autocomplete="name"
+                maxlength="100"
+              />
+            </div>
+            <div class="field full">
+              <label for="auth-email">Email address</label>
+              <input
+                id="auth-email"
+                name="email"
+                type="email"
+                autocomplete="username"
+                maxlength="254"
+                required
+              />
+            </div>
+            <div class="field full" id="auth-password-field">
+              <label for="auth-password">Password</label>
+              <input
+                id="auth-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                minlength="12"
+                required
+              />
+              <span class="auth-password-help">
+                Use 12+ characters with uppercase, lowercase, number and symbol.
+              </span>
+            </div>
+            <div class="field full" id="auth-mfa-field" hidden>
+              <label for="auth-mfa-code">Authenticator code</label>
+              <input
+                id="auth-mfa-code"
+                name="mfaCode"
+                inputmode="numeric"
+                autocomplete="one-time-code"
+                pattern="[0-9]{6}"
+                maxlength="6"
+              />
+            </div>
+            <label class="field full" id="auth-remember-field">
+              <span
+                ><input name="remember" type="checkbox" checked /> Keep me
+                signed in on this device</span
+              >
+            </label>
+          </div>
+          <p
+            class="portal-inline-note"
+            id="auth-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div class="dialog-actions" id="auth-actions">
+            <button
+              class="button button-secondary button-small"
+              type="button"
+              data-close-dialog
+            >
+              Cancel
+            </button>
+            <button
+              class="button button-secondary button-small"
+              type="button"
+              id="auth-reset"
+            >
+              Forgot password?
+            </button>
+            <button
+              class="button button-primary button-small"
+              type="submit"
+              id="auth-submit"
+            >
+              Sign in
+            </button>
+          </div>
+        </form>
+        <button
+          class="button button-secondary button-small auth-mode-toggle"
+          type="button"
+          id="auth-mode-toggle"
+        >
+          New customer? Create an account
+        </button>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./firebase-config.js"></script>
+    <script type="module" src="./firebase-auth.js"></script>
+    <script>
+      const menuItems = [
+        {
+          id: "chicken-paratha",
+          name: "Chicken Paratha Roll",
+          category: "Breakfast",
+          price: 420,
+          emoji: "🌯",
+          badge: "Bestseller",
+          type: "Non-veg",
+          description: "Flaky paratha, savoury chicken and a little kick.",
+        },
+        {
+          id: "aloo-paratha",
+          name: "Aloo Paratha",
+          category: "Breakfast",
+          price: 280,
+          emoji: "🫓",
+          badge: "Popular",
+          type: "Veg",
+          description: "Golden, crisp and filled with spiced potato.",
+        },
+        {
+          id: "anda-paratha",
+          name: "Anda Paratha",
+          category: "Breakfast",
+          price: 320,
+          emoji: "🍳",
+          badge: "",
+          type: "Veg",
+          description: "A breakfast classic with egg and warm paratha.",
+        },
+        {
+          id: "samosa",
+          name: "Aloo Samosa",
+          category: "Snacks",
+          price: 100,
+          emoji: "🥟",
+          badge: "Popular",
+          type: "Veg",
+          description: "Crisp pastry filled with gently spiced potato.",
+        },
+        {
+          id: "pakora",
+          name: "Mix Pakora",
+          category: "Snacks",
+          price: 240,
+          emoji: "🍘",
+          badge: "",
+          type: "Veg",
+          description: "A crunchy, moreish mix, perfect with chai.",
+        },
+        {
+          id: "chicken-karahi",
+          name: "Chicken Karahi",
+          category: "Lunch & Dinner",
+          price: 1250,
+          emoji: "🍲",
+          badge: "Chef's pick",
+          type: "Non-veg",
+          description: "Homestyle tomato, ginger and green chilli masala.",
+        },
+        {
+          id: "biryani",
+          name: "Chicken Biryani",
+          category: "Lunch & Dinner",
+          price: 480,
+          emoji: "🍛",
+          badge: "Bestseller",
+          type: "Non-veg",
+          description: "Fragrant rice layered with aromatic chicken masala.",
+        },
+        {
+          id: "seekh-kebab",
+          name: "Seekh Kebab",
+          category: "Lunch & Dinner",
+          price: 550,
+          emoji: "🍢",
+          badge: "",
+          type: "Non-veg",
+          description: "Smoky, spiced kebabs, grilled until just right.",
+        },
+        {
+          id: "masala-chai",
+          name: "Doodh Patti Chai",
+          category: "Drinks",
+          price: 160,
+          emoji: "☕",
+          badge: "House favourite",
+          type: "Veg",
+          description: "A proper milky chai, brewed slow and served hot.",
+        },
+        {
+          id: "lassi",
+          name: "Sweet Lassi",
+          category: "Drinks",
+          price: 220,
+          emoji: "🥛",
+          badge: "",
+          type: "Veg",
+          description: "Cool, creamy and just the right kind of sweet.",
+        },
+        {
+          id: "gulab-jamun",
+          name: "Gulab Jamun",
+          category: "Desserts",
+          price: 180,
+          emoji: "🍮",
+          badge: "",
+          type: "Veg",
+          description: "Soft, syrup-soaked and best enjoyed warm.",
+        },
+        {
+          id: "kheer",
+          name: "Kheer",
+          category: "Desserts",
+          price: 200,
+          emoji: "🍨",
+          badge: "Sweet finish",
+          type: "Veg",
+          description: "A comforting rice pudding with cardamom.",
+        },
+      ];
+
+      const categoryNames = [
+        "All",
+        "Breakfast",
+        "Snacks",
+        "Lunch & Dinner",
+        "Drinks",
+        "Desserts",
+      ];
+      const storageKeys = {
+        cart: "ztram-cafe-cart-v1",
+        favourites: "ztram-cafe-favourites-v1",
+        theme: "ztram-cafe-theme-v1",
+        reservations: "ztram-cafe-preview-reservations-v1",
+        orders: "ztram-cafe-preview-orders-v1",
+      };
+
+      function readStorage(key, fallback) {
+        try {
+          const saved = localStorage.getItem(key);
+          return saved ? JSON.parse(saved) : fallback;
+        } catch (error) {
+          console.error(`Could not read ${key} from browser storage.`, error);
+          return fallback;
+        }
+      }
+
+      let cart = readStorage(storageKeys.cart, []);
+      let favourites = readStorage(storageKeys.favourites, []);
+      let selectedCategory = "All";
+      let couponApplied = false;
+      let toastTimeout;
+
+      const money = (amount) =>
+        new Intl.NumberFormat("en-PK", { maximumFractionDigits: 0 }).format(
+          amount,
+        );
+
+      function saveStorage(key, value) {
+        try {
+          localStorage.setItem(key, JSON.stringify(value));
+        } catch (error) {
+          console.error(`Could not save ${key} to browser storage.`, error);
+          showToast("Your browser could not save this preview on this device.");
+        }
+      }
+
+      const grid = document.getElementById("menu-grid");
+      const categoryList = document.getElementById("category-list");
+      const searchInput = document.getElementById("menu-search");
+      const drawer = document.getElementById("cart-drawer");
+      const overlay = document.getElementById("cart-overlay");
+      const toast = document.getElementById("toast");
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add("show");
+        window.clearTimeout(toastTimeout);
+        toastTimeout = window.setTimeout(
+          () => toast.classList.remove("show"),
+          3000,
+        );
+      }
+
+      function renderCategories() {
+        categoryList.innerHTML = categoryNames
+          .map(
+            (category) => `
+            <button
+              class="category-button${category === selectedCategory ? " active" : ""}"
+              type="button"
+              aria-pressed="${category === selectedCategory}"
+              data-category="${category}"
+            >${category}</button>
+          `,
+          )
+          .join("");
+      }
+
+      function renderMenu() {
+        const query = searchInput.value.trim().toLocaleLowerCase();
+        const shownItems = menuItems.filter((item) => {
+          const matchesCategory =
+            selectedCategory === "All" || item.category === selectedCategory;
+          const matchesQuery =
+            `${item.name} ${item.description} ${item.category} ${item.type}`
+              .toLocaleLowerCase()
+              .includes(query);
+          return matchesCategory && matchesQuery;
+        });
+
+        if (!shownItems.length) {
+          grid.innerHTML =
+            '<p class="empty-results">We could not find a match. Try a different search or category.</p>';
+          return;
+        }
+
+        grid.innerHTML = shownItems
+          .map(
+            (item) => `
+            <article class="dish-card" data-id="${item.id}">
+              <div class="dish-photo" role="img" aria-label="${item.name} illustration">
+                ${item.badge ? `<span class="dish-badge">${item.badge}</span>` : ""}
+                <button
+                  class="favourite"
+                  type="button"
+                  aria-label="${favourites.includes(item.id) ? "Remove" : "Add"} ${item.name} ${favourites.includes(item.id) ? "from" : "to"} favourites"
+                  aria-pressed="${favourites.includes(item.id)}"
+                  data-favourite="${item.id}"
+                >${favourites.includes(item.id) ? "♥" : "♡"}</button>
+                <span class="dish-emoji" aria-hidden="true">${item.emoji}</span>
+              </div>
+              <div class="dish-info">
+                <div class="dish-meta">
+                  <span class="dish-type">${item.type} · ${item.category}</span>
+                  <span class="dish-rating" aria-label="Menu favourite">✦</span>
+                </div>
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+                <div class="dish-bottom">
+                  <span class="dish-price">Rs ${money(item.price)}</span>
+                  <button class="button button-secondary button-small" type="button" data-add="${item.id}" aria-label="Add ${item.name} to cart">Add to cart +</button>
+                </div>
+              </div>
+            </article>
+          `,
+          )
+          .join("");
+      }
+
+      function getCartTotals() {
+        const subtotal = cart.reduce(
+          (sum, line) => sum + line.price * line.quantity,
+          0,
+        );
+        const delivery = subtotal === 0 || subtotal >= 2500 ? 0 : 150;
+        const discount = couponApplied ? Math.round(subtotal * 0.1) : 0;
+        return {
+          subtotal,
+          delivery,
+          discount,
+          total: subtotal + delivery - discount,
+        };
+      }
+
+      function renderCart() {
+        cart = cart.filter(
+          (line) =>
+            menuItems.some((item) => item.id === line.id) && line.quantity > 0,
+        );
+        if (!cart.length) couponApplied = false;
+        saveStorage(storageKeys.cart, cart);
+        const itemCount = cart.reduce((sum, line) => sum + line.quantity, 0);
+        document.getElementById("cart-count").textContent = itemCount;
+
+        const itemsContainer = document.getElementById("cart-items");
+        if (!cart.length) {
+          itemsContainer.innerHTML =
+            '<div class="cart-empty"><span aria-hidden="true">🛍</span>Your cart is ready for something delicious.</div>';
+        } else {
+          itemsContainer.innerHTML = cart
+            .map(
+              (line) => `
+            <article class="cart-line">
+              <div>
+                <h3>${line.name}</h3>
+                <small>Rs ${money(line.price)} each</small>
+                <div class="quantity-control" aria-label="Quantity for ${line.name}">
+                  <button type="button" data-quantity="${line.id}" data-change="-1" aria-label="Remove one ${line.name}">−</button>
+                  <span>${line.quantity}</span>
+                  <button type="button" data-quantity="${line.id}" data-change="1" aria-label="Add one ${line.name}">+</button>
+                </div>
+              </div>
+              <span class="cart-line-total">Rs ${money(line.price * line.quantity)}</span>
+            </article>
+          `,
+            )
+            .join("");
+        }
+
+        const totals = getCartTotals();
+        document.getElementById("cart-subtotal").textContent =
+          `Rs ${money(totals.subtotal)}`;
+        document.getElementById("cart-delivery").textContent =
+          totals.subtotal === 0
+            ? "Rs 0"
+            : totals.delivery === 0
+              ? "Free (preview)"
+              : `Rs ${money(totals.delivery)}`;
+        document.getElementById("cart-discount").textContent =
+          totals.discount > 0 ? `− Rs ${money(totals.discount)}` : "Rs 0";
+        document.getElementById("cart-total").textContent =
+          `Rs ${money(totals.total)}`;
+        document.getElementById("checkout-button").disabled = !cart.length;
+        document.getElementById("checkout-button").style.opacity = cart.length
+          ? "1"
+          : "0.55";
+      }
+
+      function addToCart(itemId) {
+        const item = menuItems.find((entry) => entry.id === itemId);
+        if (!item) {
+          showToast("That menu item is unavailable.");
+          return;
+        }
+        const existing = cart.find((line) => line.id === item.id);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: 1,
+          });
+        }
+        saveStorage(storageKeys.cart, cart);
+        renderCart();
+        showToast(`${item.name} added to your preview cart.`);
+      }
+
+      function openCart() {
+        drawer.classList.add("open");
+        overlay.classList.add("open");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        document.getElementById("close-cart").focus();
+      }
+
+      function closeCart() {
+        drawer.classList.remove("open");
+        overlay.classList.remove("open");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        document.getElementById("open-cart").focus();
+      }
+
+      function openDialog(dialogId) {
+        document.querySelectorAll(".dialog-backdrop.open").forEach((dialog) => {
+          dialog.classList.remove("open");
+          dialog.setAttribute("aria-hidden", "true");
+        });
+        const dialog = document.getElementById(dialogId);
+        dialog.classList.add("open");
+        dialog.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        const firstInput = dialog.querySelector(
+          "input, select, textarea, button",
+        );
+        if (firstInput) firstInput.focus();
+      }
+
+      function closeDialog(dialog) {
+        dialog.classList.remove("open");
+        dialog.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = drawer.classList.contains("open")
+          ? "hidden"
+          : "";
+      }
+
+      const portalState = {
+        role: "",
+        tab: "overview",
+        staffRole: "kitchen",
+        managementRole: "admin",
+        managerPermissions: [],
+        attendanceClockedIn: false,
+        taskStatuses: {},
+        tables: ["Available", "Occupied", "Reserved", "VIP"],
+        menuItems: [],
+        coupons: [],
+        organizationRecords: {},
+        organizationLoads: {},
+        organizationErrors: {},
+        inventory: [
+          { name: "Chicken", quantity: 12, unit: "kg", threshold: 5 },
+          { name: "Cooking oil", quantity: 3, unit: "L", threshold: 5 },
+          { name: "Basmati rice", quantity: 18, unit: "kg", threshold: 6 },
+        ],
+        mfaSecret: null,
+      };
+
+      const portalTabs = {
+        customer: [
+          ["overview", "Overview"],
+          ["orders", "My orders"],
+          ["reservations", "Reservations"],
+          ["favorites", "Favourites"],
+          ["rewards", "Rewards"],
+          ["profile", "My profile"],
+          ["support", "Support"],
+        ],
+        staff: [
+          ["overview", "Overview"],
+          ["work", "Work queue"],
+          ["tables", "Tables"],
+          ["billing", "Billing"],
+          ["attendance", "Attendance"],
+          ["profile", "My profile"],
+        ],
+        admin: [
+          ["overview", "Overview"],
+          ["sales", "Sales"],
+          ["menu", "Menu"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["customers", "Customers"],
+          ["staff", "Staff"],
+          ["inventory", "Inventory"],
+          ["delivery", "Delivery"],
+          ["promotions", "Promotions"],
+          ["security", "Security"],
+          ["insights", "AI insights"],
+        ],
+        owner: [
+          ["overview", "Overview"],
+          ["sales", "Sales"],
+          ["menu", "Menu"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["staff", "Staff"],
+          ["inventory", "Inventory"],
+          ["security", "Security"],
+        ],
+        manager: [
+          ["overview", "Overview"],
+          ["menuItems", "Menu"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["inventory", "Inventory"],
+          ["staffDirectory", "Staff"],
+        ],
+        hr: [
+          ["overview", "Overview"],
+          ["hiringCandidates", "Hiring"],
+          ["interviews", "Interviews"],
+          ["employeeRecords", "Employees"],
+          ["onboardingTasks", "Onboarding"],
+          ["offboardingTasks", "Offboarding"],
+          ["attendance", "Attendance"],
+          ["payrollRecords", "Payroll review"],
+        ],
+        accountant: [
+          ["overview", "Overview"],
+          ["payrollRecords", "Payroll"],
+        ],
+      };
+
+      const organizationTabs = {
+        customer: [
+          ["overview", "Overview"],
+          ["orders", "My orders"],
+          ["reservations", "Reservations"],
+          ["favorites", "Favourites"],
+          ["rewards", "Rewards"],
+          ["support", "Support"],
+        ],
+        staff: [
+          ["overview", "Overview"],
+          ["work", "Work queue"],
+          ["tables", "Tables"],
+          ["billing", "Billing"],
+          ["attendance", "Attendance"],
+          ["staffProfile", "My profile"],
+        ],
+        admin: [
+          ["overview", "Overview"],
+          ["staffDirectory", "Staff"],
+          ["customers", "Customers"],
+          ["menuItems", "Menu"],
+          ["hiringCandidates", "Hiring"],
+          ["interviews", "Interviews"],
+          ["employeeRecords", "Employees"],
+          ["onboardingTasks", "Onboarding"],
+          ["offboardingTasks", "Offboarding"],
+          ["attendance", "Attendance"],
+          ["payrollRecords", "Payroll"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["inventory", "Inventory"],
+          ["auditLogs", "Audit log"],
+        ],
+        owner: [
+          ["overview", "Overview"],
+          ["staff-access", "Assign access"],
+          ["staffDirectory", "Staff"],
+          ["customers", "Customers"],
+          ["menuItems", "Menu"],
+          ["hiringCandidates", "Hiring"],
+          ["interviews", "Interviews"],
+          ["employeeRecords", "Employees"],
+          ["onboardingTasks", "Onboarding"],
+          ["offboardingTasks", "Offboarding"],
+          ["attendance", "Attendance"],
+          ["payrollRecords", "Payroll"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["inventory", "Inventory"],
+          ["auditLogs", "Audit log"],
+        ],
+        manager: [
+          ["overview", "Overview"],
+          ["menuItems", "Menu"],
+          ["orders", "Orders"],
+          ["reservations", "Reservations"],
+          ["inventory", "Inventory"],
+          ["staffDirectory", "Staff"],
+        ],
+        hr: [
+          ["overview", "Overview"],
+          ["hiringCandidates", "Hiring"],
+          ["interviews", "Interviews"],
+          ["employeeRecords", "Employees"],
+          ["onboardingTasks", "Onboarding"],
+          ["offboardingTasks", "Offboarding"],
+          ["attendance", "Attendance"],
+          ["payrollRecords", "Payroll review"],
+        ],
+        accountant: [
+          ["overview", "Overview"],
+          ["payrollRecords", "Payroll"],
+        ],
+      };
+
+      let authPortalExpected = "customer";
+      let authMode = "login";
+      let authUserRole = "";
+      let authStaffRole = "";
+
+      function updateAuthButtons(user) {
+        document.querySelectorAll("[data-open-auth]").forEach((button) => {
+          const portal = button.dataset.openAuth;
+          button.textContent = user
+            ? "Continue to your assigned portal"
+            : button.dataset.portalLabel ||
+              (portal === "customer"
+                ? "Customer sign up / login"
+                : portal === "staff"
+                  ? "Staff login"
+                  : portal === "owner"
+                    ? "Owner login"
+                    : portal === "admin"
+                      ? "Business team login"
+                      : "Portal login");
+        });
+      }
+
+      document.addEventListener("ztram-auth-state", (event) =>
+        updateAuthButtons(event.detail.user),
+      );
+
+      function authFeedback(message, isError = false) {
+        const feedback = document.getElementById("auth-feedback");
+        feedback.textContent = message;
+        feedback.style.color = isError ? "var(--accent)" : "var(--green)";
+      }
+
+      function setAuthMode(mode) {
+        authMode = mode;
+        const isSignup = mode === "signup";
+        const isMfa = mode === "mfa";
+        document.getElementById("auth-title").textContent = isMfa
+          ? "Verify your sign-in"
+          : isSignup
+            ? "Create your customer account"
+            : "Sign in to Ztram Cafe";
+        document.getElementById("auth-intro").textContent = isMfa
+          ? "Enter the current six-digit code from your authenticator app."
+          : isSignup
+            ? "Create a customer account. We will verify your email before account access."
+            : "Use your verified email and password. Your account role determines which portal opens.";
+        document.getElementById("auth-name-field").hidden = !isSignup;
+        document.getElementById("auth-name").required = isSignup;
+        document.getElementById("auth-password-field").hidden = isMfa;
+        document.getElementById("auth-mfa-field").hidden = !isMfa;
+        document.getElementById("auth-mfa-code").required = isMfa;
+        document.getElementById("auth-email").hidden = isMfa;
+        document.getElementById("auth-email").required = !isMfa;
+        document.getElementById("auth-password").required = !isMfa;
+        document.getElementById("auth-remember-field").hidden = isMfa;
+        document.getElementById("auth-reset").hidden = isSignup || isMfa;
+        document.getElementById("auth-submit").textContent = isMfa
+          ? "Verify code"
+          : isSignup
+            ? "Create account"
+            : "Sign in";
+        document.getElementById("auth-mode-toggle").hidden =
+          authPortalExpected !== "customer" || isMfa;
+        document.getElementById("auth-mode-toggle").textContent = isSignup
+          ? "Already have an account? Sign in"
+          : "New customer? Create an account";
+        authFeedback("");
+        if (!window.ztramAuth?.configured) {
+          authFeedback(
+            "Authentication is not connected yet. The cafe owner must add Firebase web app settings and an App Check reCAPTCHA Enterprise key in firebase-config.js.",
+            true,
+          );
+        } else if (!window.ztramAuth.appCheckReady) {
+          authFeedback(
+            "Sign-in is available, but secure portal services need the App Check reCAPTCHA Enterprise key configured before they can connect.",
+            true,
+          );
+        }
+      }
+
+      function openAuthentication(portal) {
+        authPortalExpected = portal;
+        document.getElementById("auth-mode-toggle").hidden =
+          portal !== "customer";
+        document.getElementById("auth-security-note").textContent =
+          portal === "customer"
+            ? "Use a unique password and verify your email. Ztram Cafe will never ask you to share a password or one-time code."
+            : portal === "owner"
+              ? "Owner access is provisioned only through the trusted local bootstrap process. There is no public owner signup. Never share your password or verification code."
+              : portal === "customer"
+                ? "Use a unique password and verify your email. Ztram Cafe will never ask you to share a password or one-time code."
+                : "There is no public staff/admin signup. An authorized owner must create your account and assign your role. Never share your password or verification code.";
+        setAuthMode("login");
+        if (window.ztramAuth?.configured && window.ztramAuth.currentUser()) {
+          openDialog("auth-dialog");
+          continueToAuthorizedPortal();
+          return;
+        }
+        openDialog("auth-dialog");
+      }
+
+      function messageForAuthError(error, operation) {
+        console.error(`Firebase ${operation} failed.`, error);
+        if (error.code === "portal/owner-not-provisioned") {
+          return error.message;
+        }
+        if (error.code === "portal/role-mismatch") {
+          return error.message;
+        }
+        if (error.code === "portal/email-not-verified") {
+          return error.message;
+        }
+        if (error.code === "portal/file-origin") {
+          return error.message;
+        }
+        if (
+          [
+            "auth/invalid-credential",
+            "auth/invalid-login-credentials",
+            "auth/wrong-password",
+            "auth/user-not-found",
+            "auth/invalid-email",
+          ].includes(error.code)
+        ) {
+          return "We couldn't sign in with those details. Check the email and password, or use Forgot password? to reset it.";
+        }
+        if (error.code === "auth/user-disabled") {
+          return "This account is disabled. Contact the cafe owner to restore access.";
+        }
+        if (error.code === "auth/operation-not-allowed") {
+          return "Email/password sign-in is not enabled for this Firebase project. The project administrator must enable it in Firebase Authentication.";
+        }
+        if (error.code === "auth/unauthorized-domain") {
+          return "This website domain is not authorized for Firebase sign-in. Add its exact hostname in Firebase Authentication → Settings → Authorized domains.";
+        }
+        if (
+          error.code === "auth/api-key-not-valid" ||
+          error.code === "auth/invalid-api-key" ||
+          error.code === "auth/app-not-authorized"
+        ) {
+          return "This website's Firebase configuration is not authorized for sign-in. Check the Firebase project and API-key restrictions.";
+        }
+        if (error.code === "auth/too-many-requests") {
+          return "Too many attempts. Wait a while before trying again.";
+        }
+        if (error.code === "auth/network-request-failed") {
+          return "Could not reach the sign-in service. Check your connection and try again.";
+        }
+        if (error.code === "auth/multi-factor-auth-required") {
+          return "This account requires multi-factor verification.";
+        }
+        if (error.code === "auth/invalid-verification-code") {
+          return "That authenticator code was not accepted. Enter the current six-digit code and try again.";
+        }
+        const errorCode = error.code ? ` (Firebase error: ${error.code})` : "";
+        return operation === "sign-in"
+          ? `Sign-in could not be completed. Check your email/password, verify your email, and confirm that your account has access to this portal.${errorCode}`
+          : `The request could not be completed. Check your information or contact the cafe administrator.${errorCode}`;
+      }
+
+      async function continueToAuthorizedPortal() {
+        try {
+          const { user, role, staffRole, managerPermissions, profileReady } =
+            await window.ztramAuth.completeSignIn(authPortalExpected);
+          authUserRole = role;
+          authStaffRole = staffRole;
+          portalState.managerPermissions = managerPermissions;
+          portalState.authenticatedUser = user;
+          if (!profileReady) {
+            showToast(
+              "Signed in, but the customer profile could not be initialized. Check Firebase App Check and Functions setup.",
+            );
+          }
+          portalState.role = role === "staff" ? "staff" : role;
+          portalState.staffRole = staffRole || "kitchen";
+          portalState.managementRole =
+            role === "manager"
+              ? "manager"
+              : role === "owner"
+                ? "owner"
+                : "admin";
+          portalState.organizationRecords = {};
+          portalState.organizationLoads = {};
+          portalState.organizationErrors = {};
+          portalState.tab = "overview";
+          closeDialog(document.getElementById("auth-dialog"));
+          renderPortal();
+          document.getElementById("portal-dashboard").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        } catch (error) {
+          console.error("Could not open the authenticated portal.", error);
+          authFeedback(messageForAuthError(error, "sign-in"), true);
+        }
+      }
+
+      document.querySelectorAll("[data-open-auth]").forEach((button) => {
+        button.addEventListener("click", () =>
+          openAuthentication(button.dataset.openAuth),
+        );
+      });
+
+      document
+        .getElementById("auth-mode-toggle")
+        .addEventListener("click", () => {
+          setAuthMode(authMode === "signup" ? "login" : "signup");
+          document.getElementById("auth-name").required = authMode === "signup";
+        });
+
+      document
+        .getElementById("auth-reset")
+        .addEventListener("click", async () => {
+          const email = document
+            .getElementById("auth-email")
+            .value.trim()
+            .toLowerCase();
+          if (!email) {
+            authFeedback("Enter your email address first.", true);
+            return;
+          }
+          if (!window.ztramAuth?.configured) {
+            authFeedback("Firebase Authentication is not configured.", true);
+            return;
+          }
+          try {
+            await window.ztramAuth.sendPasswordReset(email);
+          } catch (error) {
+            console.error("Password reset request failed.", error);
+          }
+          authFeedback(
+            "If an account can receive a reset link at that address, an email will be sent.",
+          );
+        });
+
+      document
+        .getElementById("auth-form")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const authClient = window.ztramAuth;
+          if (!authClient?.configured) {
+            authFeedback(
+              "Firebase is not connected. Configure firebase-config.js with the cafe's Firebase Web app values first.",
+              true,
+            );
+            return;
+          }
+          const form = event.currentTarget;
+          const data = new FormData(form);
+          const email = String(data.get("email") || "")
+            .trim()
+            .toLowerCase();
+          const password = String(data.get("password") || "");
+          const submitButton = document.getElementById("auth-submit");
+          submitButton.disabled = true;
+
+          try {
+            if (authMode === "signup") {
+              const fullName = String(data.get("name") || "").trim();
+              if (fullName.length < 2 || fullName.length > 100) {
+                throw new Error("Enter your name (2 to 100 characters).");
+              }
+              if (
+                password.length < 12 ||
+                !/[a-z]/.test(password) ||
+                !/[A-Z]/.test(password) ||
+                !/[0-9]/.test(password) ||
+                !/[^A-Za-z0-9]/.test(password)
+              ) {
+                throw new Error(
+                  "Use at least 12 characters with uppercase, lowercase, a number and a symbol.",
+                );
+              }
+              await authClient.createCustomerAccount(email, password, fullName);
+              form.reset();
+              setAuthMode("login");
+              authFeedback(
+                "Account created. Check your inbox and verify your email before signing in.",
+              );
+              return;
+            }
+
+            if (authMode === "mfa") {
+              const code = String(data.get("mfaCode") || "").trim();
+              if (!/^\d{6}$/.test(code)) {
+                throw new Error("Enter the six-digit authenticator code.");
+              }
+              await authClient.verifyTotp(code);
+              await continueToAuthorizedPortal();
+              return;
+            }
+
+            if (location.protocol === "file:") {
+              const error = new Error(
+                "This page is opened directly from a file. Firebase sign-in requires an authorized website origin. Run the site on http://localhost or open its deployed HTTPS URL; do not open index.html directly.",
+              );
+              error.code = "portal/file-origin";
+              throw error;
+            }
+
+            await authClient.setRememberMe(Boolean(data.get("remember")));
+            const result = await authClient.signIn(email, password);
+            if (result.requiresMfa) {
+              setAuthMode("mfa");
+              document.getElementById("auth-mfa-code").focus();
+              return;
+            }
+            await continueToAuthorizedPortal();
+          } catch (error) {
+            authFeedback(
+              error.code
+                ? messageForAuthError(
+                    error,
+                    authMode === "login" ? "sign-in" : "account",
+                  )
+                : error.message,
+              true,
+            );
+          } finally {
+            submitButton.disabled = false;
+          }
+        });
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(/[&<>"']/g, (character) => {
+          const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+          };
+          return entities[character];
+        });
+      }
+
+      function portalKpis(items) {
+        return `<div class="portal-kpis">${items
+          .map(
+            ([label, value]) => `
+              <div class="portal-kpi">
+                <span>${escapeHtml(label)}</span>
+                <strong>${escapeHtml(value)}</strong>
+              </div>
+            `,
+          )
+          .join("")}</div>`;
+      }
+
+      function portalTable(headers, rows) {
+        if (!rows.length) {
+          return '<p class="portal-inline-note">Nothing to show yet in this local preview.</p>';
+        }
+        return `<div class="portal-table-wrap"><table class="portal-table">
+          <thead><tr>${headers.map((header) => `<th scope="col">${escapeHtml(header)}</th>`).join("")}</tr></thead>
+          <tbody>${rows
+            .map(
+              (row) =>
+                `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`,
+            )
+            .join("")}</tbody>
+        </table></div>`;
+      }
+
+      function portalPage(title, subtitle, body) {
+        return `<h4>${escapeHtml(title)}</h4><p class="portal-subtitle">${escapeHtml(subtitle)}</p>${body}`;
+      }
+
+      function customerOrderRows() {
+        const orders = readStorage(storageKeys.orders, []);
+        return orders.map((order) => [
+          escapeHtml(order.reference || "Preview order"),
+          escapeHtml(
+            (order.items || [])
+              .map((item) => `${item.name || "Item"} × ${item.quantity || 1}`)
+              .join(", ") || "Order items",
+          ),
+          `Rs ${money(Number(order.total) || 0)}`,
+          `<span class="portal-status">${escapeHtml(order.status || "Preview")}</span>`,
+        ]);
+      }
+
+      function customerReservationRows() {
+        return readStorage(storageKeys.reservations, []).map(
+          (reservation, index) => [
+            `Preview booking ${index + 1}`,
+            escapeHtml(reservation.date || "Date not set"),
+            escapeHtml(reservation.time || "Time not set"),
+            `${escapeHtml(reservation.guests || "—")} guests`,
+            `<span class="portal-status">Local preview</span>`,
+          ],
+        );
+      }
+
+      function staffTasks() {
+        const work = {
+          kitchen: [
+            ["KT-2041", "Chicken biryani × 2", "Received"],
+            ["KT-2042", "Chicken karahi × 1", "Cooking"],
+            ["KT-2043", "Doodh patti chai × 3", "Preparing"],
+          ],
+          waiter: [
+            ["T-04", "Table 4 · water request", "Open"],
+            ["T-02", "Table 2 · bill request", "Open"],
+            ["T-07", "Reservation · 4 guests", "Reserved"],
+          ],
+          delivery: [
+            ["DL-102", "Malkay Kalan · Demo address", "Assigned"],
+            ["DL-103", "Sialkot · Demo address", "On the way"],
+          ],
+          cashier: [
+            ["CS-031", "Pickup · Demo ticket", "Awaiting payment"],
+            ["CS-032", "Dine-in · Demo ticket", "Awaiting payment"],
+          ],
+          receptionist: [
+            ["RS-101", "Reservation enquiry", "Open"],
+            ["RS-102", "Front-desk assistance", "In review"],
+          ],
+        };
+        return work[portalState.staffRole] || [];
+      }
+
+      function renderPortal() {
+        const dashboard = document.getElementById("portal-dashboard");
+        if (!portalState.authenticatedUser) {
+          dashboard.hidden = true;
+          return;
+        }
+        const heading = document.getElementById("portal-heading");
+        const subheading = document.getElementById("portal-subheading");
+        const tabs = document.getElementById("portal-tabs");
+        const content = document.getElementById("portal-content");
+        dashboard.hidden = false;
+        document.getElementById("portal-auth-status").hidden = false;
+        document.getElementById("portal-auth-status").textContent =
+          portalState.authenticatedUser.email;
+        document.getElementById("portal-sign-out").hidden = false;
+
+        const roleName =
+          portalState.role === "staff"
+            ? `${portalState.staffRole} staff`
+            : portalState.role === "accountant"
+              ? "accounts"
+              : portalState.role;
+        heading.textContent = `${roleName[0].toUpperCase()}${roleName.slice(1)} portal`;
+        subheading.textContent =
+          "Signed-in, role-checked workspace · access is limited by your assigned role";
+
+        const availableTabs = [
+          ["account", "Account"],
+          ["security", "Security"],
+        ];
+        if (organizationTabs[authUserRole]) {
+          const managerPermissionByTab = {
+            orders: "orders",
+            reservations: "reservations",
+            inventory: "inventory",
+            menuItems: "menu",
+            staffDirectory: "staffDirectory",
+            attendance: "attendance",
+          };
+          const roleTabs = organizationTabs[authUserRole].filter(([key]) => {
+            const permission = managerPermissionByTab[key];
+            return (
+              (authUserRole !== "manager" ||
+                !permission ||
+                portalState.managerPermissions.includes(permission)) &&
+              (authUserRole !== "staff" ||
+                ((key !== "tables" || authStaffRole === "waiter") &&
+                  (key !== "billing" || authStaffRole === "cashier")))
+            );
+          });
+          availableTabs.push(...roleTabs);
+        }
+        tabs.innerHTML = availableTabs
+          .map(
+            ([key, label]) => `
+              <button
+                class="portal-tab"
+                type="button"
+                data-portal-tab="${key}"
+                aria-selected="${portalState.tab === key}"
+              >${label}</button>
+            `,
+          )
+          .join("");
+
+        content.innerHTML = renderAuthenticatedPortal();
+      }
+
+      function renderOrganizationPortal() {
+        const collections = {
+          hiringCandidates: [
+            "Hiring candidates",
+            ["Name", "Email", "Position", "Stage"],
+          ],
+          interviews: [
+            "Interviews",
+            ["Candidate", "Interviewer", "Date", "Status"],
+          ],
+          employeeRecords: [
+            "Employee records",
+            ["Employee", "Email", "Position", "Status"],
+          ],
+          onboardingTasks: [
+            "Onboarding checklist",
+            ["Employee", "Task", "Date", "Status"],
+          ],
+          offboardingTasks: [
+            "Offboarding checklist",
+            ["Employee", "Task", "Date", "Status"],
+          ],
+          attendance: [
+            "Attendance records",
+            ["Staff", "Date", "Clock in", "Clock out"],
+          ],
+          payrollRecords: [
+            "Payroll records",
+            ["Employee UID", "Period", "Gross PKR", "Net PKR", "Status"],
+          ],
+          staffDirectory: [
+            "Staff directory",
+            ["Name", "Email", "Responsibility"],
+          ],
+          customers: [
+            "Customer management",
+            ["Customer", "Email", "Phone", "Rewards", "Tier"],
+          ],
+          auditLogs: [
+            "Security audit log",
+            ["Action", "Actor account", "Record", "Timestamp"],
+          ],
+          orders: ["Orders", ["Order", "Status", "Total"]],
+          reservations: ["Reservations", ["Date", "Time", "Guests", "Status"]],
+          inventory: ["Inventory", ["Item", "Quantity", "Unit"]],
+          menuItems: [
+            "Menu management",
+            ["Item", "Category", "Price (PKR)", "Type", "Availability"],
+          ],
+        };
+        const collection = portalState.tab;
+        if (collection === "overview") {
+          const manager = authUserRole === "manager";
+          const content = manager
+            ? `<div class="portal-grid"><div class="portal-panel"><h5>Assigned operations</h5><p>${portalState.managerPermissions.length ? escapeHtml(portalState.managerPermissions.join(", ")) : "No operational areas have been assigned yet."}</p></div><div class="portal-panel"><h5>Restricted information</h5><p>Customer database, payroll, HR records, role assignment and system settings are not available to managers.</p></div></div>`
+            : authUserRole === "hr"
+              ? '<div class="portal-grid"><div class="portal-panel"><h5>People operations</h5><p>Manage hiring, interviews, employee lifecycle, onboarding, offboarding and attendance.</p></div><div class="portal-panel"><h5>Payroll handoff</h5><p>Submit manually entered payroll amounts for accountant review. Pakistan tax or statutory deductions are not calculated.</p></div></div>'
+              : authUserRole === "accountant"
+                ? '<div class="portal-grid"><div class="portal-panel"><h5>Payroll control</h5><p>Review HR-submitted PKR payroll, approve it, then record that payment was completed.</p></div><div class="portal-panel"><h5>Approval sequence</h5><p>Pending review → Approved → Paid. Payment is recorded here; no bank transfer is initiated.</p></div></div>'
+                : authUserRole === "owner"
+                  ? '<div class="portal-grid"><div class="portal-panel"><h5>Owner control</h5><p>You control administrator, manager, HR and accounts access. Owner access cannot be assigned or changed from this portal.</p></div><div class="portal-panel"><h5>Manager permissions</h5><p>Assign each manager only the operational areas needed for their responsibility. Payroll, HR and customer records are never manager scopes.</p></div></div>'
+                  : '<div class="portal-grid"><div class="portal-panel"><h5>Admin access</h5><p>Administrators can manage cafe operations and staff responsibilities but cannot grant administrator, manager, HR or accounts portal access.</p></div><div class="portal-panel"><h5>Record status</h5><p>Private business data loads from Firebase only when this project is configured and deployed.</p></div></div>';
+          return portalPage(
+            `${authUserRole === "owner" ? "Owner" : authUserRole === "admin" ? "Admin" : authUserRole === "manager" ? "Manager" : authUserRole === "hr" ? "HR" : "Accounts"} dashboard`,
+            "Secure workspace. Information and actions are restricted by the verified role assigned to this account.",
+            content,
+          );
+        }
+        const [title, headers] = collections[collection] || [];
+        if (!title) {
+          return portalPage("Workspace", "Choose a section from the tabs.", "");
+        }
+        const records = portalState.organizationRecords[collection];
+        if (!records && !portalState.organizationLoads[collection]) {
+          portalState.organizationLoads[collection] = true;
+          window.ztramAuth
+            .getOrganizationRecords(collection)
+            .then((result) => {
+              portalState.organizationRecords[collection] = result.data.records;
+            })
+            .catch((error) => {
+              console.error(`Could not load ${collection}.`, error);
+              portalState.organizationErrors[collection] =
+                error.message || "This record group could not be loaded.";
+            })
+            .finally(() => {
+              delete portalState.organizationLoads[collection];
+              if (portalState.tab === collection) renderPortal();
+            });
+        }
+        const failure = portalState.organizationErrors[collection];
+        const body = failure
+          ? `<div class="portal-panel"><p class="portal-inline-note">${escapeHtml(failure)}</p><button class="button button-secondary button-small" type="button" data-portal-action="reload-organization" data-collection="${collection}">Try again</button></div>`
+          : !records
+            ? '<p class="portal-inline-note">Loading protected records…</p>'
+            : renderOrganizationRecords(collection, records, headers);
+        const form =
+          collection === "menuItems" &&
+          ["owner", "admin", "manager"].includes(authUserRole)
+            ? renderMenuForm()
+            : (authUserRole === "hr" ||
+                  authUserRole === "admin" ||
+                  authUserRole === "owner") &&
+                [
+                  "hiringCandidates",
+                  "interviews",
+                  "employeeRecords",
+                  "onboardingTasks",
+                  "offboardingTasks",
+                  "attendance",
+                  "payrollRecords",
+                ].includes(collection)
+              ? renderOrganizationForm(collection)
+              : "";
+        return portalPage(
+          title,
+          collection === "payrollRecords"
+            ? "Payroll amounts are manually entered PKR records. This workflow does not calculate Pakistani tax or statutory deductions."
+            : "Restricted business records. Changes are saved through authenticated, audited server functions.",
+          `${body}${form}`,
+        );
+      }
+
+      function renderOrganizationRecords(collection, records, headers) {
+        const text = (value) => escapeHtml(value ?? "—");
+        const timestamp = (value) => {
+          const date = value?.toDate
+            ? value.toDate()
+            : value?.seconds || value?._seconds
+              ? new Date((value.seconds ?? value._seconds) * 1000)
+              : null;
+          return date && !Number.isNaN(date.getTime())
+            ? escapeHtml(
+                new Intl.DateTimeFormat("en-PK", {
+                  timeZone: "Asia/Karachi",
+                  dateStyle: "short",
+                  timeStyle: "short",
+                }).format(date),
+              )
+            : "—";
+        };
+        const rows = records.map((record) => {
+          let cells;
+          switch (collection) {
+            case "hiringCandidates":
+              cells = [
+                record.fullName,
+                record.email,
+                record.position,
+                record.stage,
+              ];
+              break;
+            case "interviews":
+              cells = [
+                record.candidateId,
+                record.interviewer,
+                `${record.date || ""} ${record.time || ""}`,
+                record.status,
+              ];
+              break;
+            case "employeeRecords":
+              cells = [
+                record.employeeName,
+                record.employeeEmail,
+                record.position,
+                record.status,
+              ];
+              break;
+            case "onboardingTasks":
+            case "offboardingTasks":
+              cells = [
+                record.employeeName || record.employeeUid,
+                record.task,
+                record.date,
+                record.status,
+              ];
+              break;
+            case "attendance":
+              cells = [
+                record.staffName || record.staffId,
+                record.date,
+                timestamp(record.clockedInAt),
+                timestamp(record.clockedOutAt),
+              ];
+              break;
+            case "payrollRecords": {
+              cells = [
+                record.employeeUid,
+                record.period,
+                `Rs ${money(record.grossPayPkr || 0)}`,
+                `Rs ${money(record.netPayPkr || 0)}`,
+                record.status,
+              ];
+              const nextStatus = ["owner", "accountant", "admin"].includes(
+                authUserRole,
+              )
+                ? record.status === "pending_review"
+                  ? "approved"
+                  : record.status === "approved"
+                    ? "paid"
+                    : ""
+                : "";
+              if (nextStatus) {
+                cells.push(
+                  `<button class="button button-secondary button-small" type="button" data-portal-action="payroll-status" data-id="${text(record.id)}" data-status="${nextStatus}">${nextStatus === "paid" ? "Mark paid" : "Approve"}</button>`,
+                );
+              }
+              break;
+            }
+            case "staffDirectory":
+              cells = [
+                record.displayName,
+                record.email || "Restricted",
+                record.staffRole || record.role,
+              ];
+              break;
+            case "customers":
+              cells = [
+                record.fullName,
+                record.email,
+                record.phone,
+                record.rewardPoints,
+                record.membershipLevel,
+              ];
+              break;
+            case "menuItems":
+              cells = [
+                record.name,
+                record.category,
+                `Rs ${money(record.pricePkr || 0)}`,
+                record.type === "non_veg" ? "Non-veg" : "Veg",
+                record.active === false ? "Unavailable" : "Available",
+              ];
+              break;
+            case "auditLogs":
+              cells = [
+                record.action,
+                record.actorId,
+                record.targetId,
+                record.createdAt?.toDate
+                  ? record.createdAt.toDate().toLocaleString()
+                  : record.createdAt?.seconds || record.createdAt?._seconds
+                    ? new Date(
+                        (record.createdAt.seconds ??
+                          record.createdAt._seconds) * 1000,
+                      ).toLocaleString()
+                    : "—",
+              ];
+              break;
+            case "orders":
+              cells = [
+                record.id,
+                record.status,
+                `Rs ${money(record.totalPkr || record.total || 0)}`,
+              ];
+              break;
+            case "reservations":
+              cells = [record.date, record.time, record.guests, record.status];
+              break;
+            default:
+              cells = [record.name, record.quantity, record.unit];
+          }
+          return cells.map((cell) =>
+            typeof cell === "string" && cell.startsWith("<button")
+              ? cell
+              : text(cell),
+          );
+        });
+        if (
+          collection === "payrollRecords" &&
+          rows.length &&
+          ["admin", "accountant"].includes(authUserRole)
+        )
+          headers = [...headers, "Action"];
+        return rows.length
+          ? portalTable(headers, rows)
+          : '<p class="portal-inline-note">No records have been added yet.</p>';
+      }
+
+      function renderOrganizationForm(collection) {
+        const field = (label, name, type = "text", required = true) =>
+          `<div class="field"><label>${label}</label><input name="${name}" type="${type}" ${required ? "required" : ""} /></div>`;
+        let fields = "";
+        if (collection === "hiringCandidates") {
+          fields = `${field("Candidate name", "fullName")}${field("Email", "email", "email")}${field("Phone", "phone", "tel", false)}${field("Position", "position")}`;
+        } else if (collection === "interviews") {
+          fields = `${field("Candidate record ID", "candidateId")}${field("Interviewer", "interviewer")}${field("Date", "date", "date")}${field("Time", "time", "time")}`;
+        } else if (collection === "employeeRecords") {
+          fields = `${field("Verified Firebase account UID", "employeeUid")}${field("Position", "position")}${field("Start date", "date", "date")}`;
+        } else if (collection === "payrollRecords") {
+          fields = `${field("Employee UID", "employeeUid")}${field("Payroll period (YYYY-MM)", "period", "month")}${field("Gross pay (PKR)", "grossPayPkr", "number")}${field("Deductions (PKR)", "deductionsPkr", "number")}${field("Benefits (PKR)", "benefitsPkr", "number", false)}`;
+        } else if (collection === "attendance") {
+          fields = `${field("Verified employee account UID", "staffId")}${field("Work date", "date", "date")}${field("Clock in (Pakistan time)", "clockIn", "time", false)}${field("Clock out (Pakistan time)", "clockOut", "time", false)}`;
+        } else {
+          fields = `${field("Employee UID", "employeeUid")}${field("Position", "position")}${field("Task", "task")}${field("Date", "date", "date")}`;
+        }
+        return `<form class="portal-form" data-portal-form="organization-record" data-record-type="${collection}"><div class="field full"><h4>${collection === "payrollRecords" ? "Submit payroll for review" : "Add record"}</h4></div>${fields}<div class="field full"><button class="button button-primary button-small" type="submit">Save securely</button></div></form>`;
+      }
+
+      function renderMenuForm() {
+        return `<form class="portal-form" data-portal-form="menu-record"><div class="field"><label>Menu item ID (lowercase and hyphens)</label><input name="itemId" required maxlength="80" /></div><div class="field"><label>Dish name</label><input name="name" required maxlength="100" /></div><div class="field"><label>Category</label><input name="category" required maxlength="60" /></div><div class="field"><label>Price (PKR)</label><input name="pricePkr" type="number" min="0" step="1" required /></div><div class="field"><label>Food type</label><select name="type"><option value="veg">Vegetarian</option><option value="non_veg">Non-vegetarian</option></select></div><div class="field"><label>Availability</label><select name="active"><option value="true">Available</option><option value="false">Unavailable</option></select></div><div class="field full"><label>Description</label><input name="description" maxlength="500" /></div><div class="field full"><button class="button button-primary button-small" type="submit">Save menu item</button></div></form>`;
+      }
+
+      function renderAuthenticatedPortal() {
+        const user = portalState.authenticatedUser;
+        const verified = user.emailVerified ? "Verified" : "Unverified";
+        const factors = user.multiFactor?.enrolledFactors || [];
+        const mfaStatus = factors.length
+          ? `${factors.length} factor${factors.length === 1 ? "" : "s"} enrolled`
+          : "Not enrolled";
+        const mfaSetup = factors.length
+          ? '<div class="portal-panel"><h5>Authenticator app</h5><p>Multi-factor authentication is enrolled for this account.</p></div>'
+          : portalState.mfaSecret
+            ? `<div class="portal-panel"><h5>Finish authenticator setup</h5><p>Add this time-based key in your authenticator app, then enter its current six-digit code. Keep the setup key private.</p><p><code>${escapeHtml(portalState.mfaSecret.secretKey)}</code></p><form class="portal-form" data-portal-form="mfa-enroll"><div class="field"><label for="portal-mfa-code">Authenticator code</label><input id="portal-mfa-code" name="code" required inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" /></div><div class="field"><button class="button button-primary button-small" type="submit">Enable multi-factor sign-in</button></div></form></div>`
+            : '<div class="portal-panel"><h5>Authenticator app</h5><p>Set up TOTP multi-factor authentication. Staff, managers, HR, accounts and admin accounts should enroll before the owner enforces MFA.</p><form class="portal-form" data-portal-form="mfa-start"><div class="field"><label for="portal-mfa-password">Confirm your password</label><input id="portal-mfa-password" name="password" type="password" autocomplete="current-password" required /></div><div class="field"><button class="button button-secondary button-small" type="submit">Verify &amp; set up authenticator</button></div></form></div>';
+        if (portalState.tab === "staff-access") {
+          if (!["owner", "admin"].includes(authUserRole)) {
+            return portalPage(
+              "Access management unavailable",
+              "Only the owner can grant portal roles. Administrators can assign staff responsibilities only.",
+              "",
+            );
+          }
+          const isOwner = authUserRole === "owner";
+          const roleOptions = isOwner
+            ? '<option value="staff">Staff responsibility</option><option value="manager">Manager</option><option value="hr">HR</option><option value="accountant">Accounts</option><option value="admin">Administrator</option>'
+            : '<option value="staff">Staff responsibility</option>';
+          const managerPermissionField = isOwner
+            ? '<div class="field full" id="portal-manager-permissions-field" hidden><strong>Manager operational access</strong><label><input type="checkbox" name="managerPermissions" value="orders" /> Orders and delivery</label><label><input type="checkbox" name="managerPermissions" value="reservations" /> Reservations and tables</label><label><input type="checkbox" name="managerPermissions" value="menu" /> Menu</label><label><input type="checkbox" name="managerPermissions" value="inventory" /> Inventory</label><label><input type="checkbox" name="managerPermissions" value="staffDirectory" /> Staff directory</label><label><input type="checkbox" name="managerPermissions" value="attendance" /> Attendance</label><p class="portal-inline-note">HR, payroll, customer records, access assignment and system settings are never manager permissions.</p></div>'
+            : "";
+          return portalPage(
+            "Assign account access",
+            isOwner
+              ? "Create access for an existing verified Firebase account. Only you can grant or remove privileged portal roles. Owner access cannot be assigned here."
+              : "Assign a staff responsibility to an existing verified Firebase account. Admins cannot grant or change owner, administrator, manager, HR or accounts access.",
+            `<form class="portal-form" data-portal-form="role-assignment"><div class="field full"><label for="portal-role-email">Existing verified account email</label><input id="portal-role-email" name="email" type="email" required maxlength="254" autocomplete="off" /></div><div class="field"><label for="portal-account-role">Portal role</label><select id="portal-account-role" name="role">${roleOptions}</select></div><div class="field" id="portal-staff-role-field"><label for="portal-account-staff-role">Staff responsibility</label><select id="portal-account-staff-role" name="staffRole"><option value="kitchen">Kitchen</option><option value="waiter">Waiter</option><option value="delivery">Delivery</option><option value="cashier">Cashier</option><option value="support">Support</option><option value="receptionist">Receptionist</option></select></div>${managerPermissionField}<div class="field full"><button class="button button-primary button-small" type="submit">Assign role securely</button></div></form><p class="portal-inline-note">The server verifies the target email and authorization, and audit logs each role change.</p>`,
+          );
+        }
+        if (portalState.tab === "security") {
+          return portalPage(
+            "Account security",
+            "Authentication status for your signed-in Firebase account.",
+            `${portalKpis([
+              ["Email", verified],
+              ["Portal role", authUserRole],
+              ["Multi-factor auth", mfaStatus],
+              [
+                "Last sign-in",
+                user.metadata.lastSignInTime
+                  ? new Date(user.metadata.lastSignInTime).toLocaleString()
+                  : "Not available",
+              ],
+            ])}${mfaSetup}<div class="portal-panel"><h5>Keep your account safe</h5><p>Use a unique password, enable multi-factor authentication where available, and never approve unexpected sign-in prompts. The cafe will never ask you to share your password or one-time codes.</p><button class="button button-secondary button-small" type="button" data-portal-action="password-reset">Send password reset link</button></div>`,
+          );
+        }
+        if (["customer", "staff"].includes(authUserRole)) {
+          return renderBasicRolePortal();
+        }
+        if (
+          ["admin", "manager", "hr", "accountant"].includes(authUserRole) &&
+          portalState.tab !== "account"
+        ) {
+          return renderOrganizationPortal();
+        }
+
+        function renderBasicRolePortal() {
+          const user = portalState.authenticatedUser;
+          const customer = authUserRole === "customer";
+          const titleByTab = {
+            orders: "My orders",
+            reservations: "Reservations",
+            favorites: "Favourites",
+            rewards: "Rewards",
+            support: "Customer support",
+            work: "Work queue",
+            tables: "Tables",
+            billing: "Billing",
+            attendance: "Attendance",
+            staffProfile: "Staff profile",
+          };
+          const title =
+            portalState.tab === "overview"
+              ? `${customer ? "Customer" : "Staff"} dashboard`
+              : titleByTab[portalState.tab] || "Portal";
+          const summary = customer
+            ? "Your customer account is signed in. Order history, reservations, rewards and support records require the cafe's database and backend, which have not been deployed."
+            : `Signed in as ${authStaffRole}. Live work assignments and attendance actions require the cafe's database and backend, which have not been deployed.`;
+          const content =
+            portalState.tab === "overview"
+              ? `<div class="portal-grid">${portalKpis([
+                  ["Account", escapeHtml(user.email || "Verified user")],
+                  ["Email", user.emailVerified ? "Verified" : "Unverified"],
+                  ["Portal", customer ? "Customer" : escapeHtml(authStaffRole)],
+                  ["Live records", "Not connected"],
+                ])}</div><div class="portal-panel"><h5>${customer ? "Customer services" : "Staff workspace"}</h5><p>${escapeHtml(summary)}</p></div>`
+              : `<div class="portal-panel"><h5>${escapeHtml(title)}</h5><p>${escapeHtml(summary)} No sample records are shown as live cafe data.</p></div>`;
+          return portalPage(title, summary, content);
+        }
+        return portalPage(
+          `Welcome${user.displayName ? `, ${user.displayName}` : ""}`,
+          "This private portal shell is tied to your signed-in account and verified role.",
+          `${portalKpis([
+            ["Account", user.email || "Verified user"],
+            ["Email status", verified],
+            ["Portal access", authUserRole],
+            ["Assigned team", authUserRole === "staff" ? authStaffRole : "—"],
+          ])}<div class="portal-panel"><h5>Your private portal</h5><p>Your account is authenticated. Real orders, bookings, staff tasks and management data are not connected to this homepage yet; only the Firebase role and account status are live.</p><button class="button button-secondary button-small" type="button" data-portal-tab="security">Review account security</button></div>`,
+        );
+      }
+
+      function renderCustomerPortal() {
+        const savedOrders = readStorage(storageKeys.orders, []);
+        const reservations = readStorage(storageKeys.reservations, []);
+        const favoriteItems = menuItems.filter((item) =>
+          favourites.includes(item.id),
+        );
+        switch (portalState.tab) {
+          case "orders":
+            return portalPage(
+              "Your order history",
+              "Only demo orders saved in this browser are listed here.",
+              portalTable(
+                ["Reference", "Items", "Total", "Status"],
+                customerOrderRows(),
+              ),
+            );
+          case "reservations":
+            return portalPage(
+              "Your reservations",
+              "Preview bookings are saved on this device only; the cafe is not notified.",
+              portalTable(
+                ["Booking", "Date", "Time", "Guests", "Status"],
+                customerReservationRows(),
+              ),
+            );
+          case "favorites":
+            return portalPage(
+              "Your favourites",
+              "Favourites from the public menu on this browser.",
+              favoriteItems.length
+                ? portalTable(
+                    ["Dish", "Category", "Sample price"],
+                    favoriteItems.map((item) => [
+                      escapeHtml(item.name),
+                      escapeHtml(item.category),
+                      `Rs ${money(item.price)}`,
+                    ]),
+                  )
+                : '<p class="portal-inline-note">Tap the heart on a menu item to save a local preview favourite.</p>',
+            );
+          case "rewards":
+            return portalPage(
+              "Loyalty & rewards",
+              "Illustrative tier and points only. No loyalty account is active.",
+              `${portalKpis([
+                ["Membership tier", "Bronze"],
+                ["Reward points", "120"],
+                ["Next tier", "Silver"],
+                ["Birthday reward", "Not set"],
+              ])}<div class="portal-panel"><h5>Member levels</h5><p>Bronze · Silver · Gold · Platinum. Points and benefits will be managed securely after the customer portal is connected.</p></div>`,
+            );
+          case "profile":
+            return portalPage(
+              "Profile & addresses",
+              "Sample profile only; do not enter private information in this preview.",
+              `<div class="portal-grid"><div class="portal-panel"><h5>Profile</h5><p>Cafe Guest<br />guest@example.test<br />03xx-xxxxxxx</p></div><div class="portal-panel"><h5>Saved addresses</h5><p>No real address is stored in this demonstration.</p></div></div>`,
+            );
+          case "support":
+            return portalPage(
+              "Customer support",
+              "This preview form does not send a message or create a ticket.",
+              `<form class="portal-form" data-portal-form="support"><div class="field"><label for="portal-support-category">Topic</label><select id="portal-support-category" name="category"><option>Order question</option><option>Reservation</option><option>Rewards</option><option>Other</option></select></div><div class="field"><label for="portal-support-subject">Subject</label><input id="portal-support-subject" name="subject" required maxlength="80" placeholder="Short subject" /></div><div class="field full"><label for="portal-support-message">Message</label><textarea id="portal-support-message" name="message" required maxlength="500" placeholder="Write a sample message"></textarea></div><div class="field full"><button class="button button-primary button-small" type="submit">Preview support request</button></div></form>`,
+            );
+          default:
+            return portalPage(
+              "Welcome back, Cafe Guest",
+              "Your customer space for orders, bookings and rewards.",
+              `${portalKpis([
+                ["Membership", "Bronze"],
+                ["Reward points", "120"],
+                ["Active orders", savedOrders.length],
+                ["Reservations", reservations.length],
+              ])}<div class="portal-grid"><div class="portal-panel"><h5>Order something good</h5><p>Browse Pakistani favourites and add them to your preview cart. Checkout is not connected to the cafe.</p><a class="button button-secondary button-small" href="#menu" data-portal-shop>Browse menu</a></div><div class="portal-panel"><h5>Need a table?</h5><p>Request a sample reservation using the existing preview form.</p><button class="button button-secondary button-small" type="button" data-portal-reserve>Reserve a table</button></div></div>`,
+            );
+        }
+      }
+
+      function renderStaffPortal() {
+        const taskRows = staffTasks().map(([id, title, defaultStatus]) => {
+          const status = portalState.taskStatuses[id] || defaultStatus;
+          const actionLabel =
+            portalState.staffRole === "kitchen"
+              ? "Advance"
+              : portalState.staffRole === "waiter"
+                ? "Resolve"
+                : portalState.staffRole === "delivery"
+                  ? "Advance"
+                  : "Mark reviewed";
+          return [
+            escapeHtml(id),
+            escapeHtml(title),
+            `<span class="portal-status">${escapeHtml(status)}</span>`,
+            `<button class="portal-action" type="button" data-portal-action="task" data-task="${escapeHtml(id)}">${actionLabel}</button>`,
+          ];
+        });
+        switch (portalState.tab) {
+          case "work":
+            return portalPage(
+              portalState.staffRole === "kitchen"
+                ? "Kitchen order queue"
+                : portalState.staffRole === "delivery"
+                  ? "Assigned deliveries"
+                  : portalState.staffRole === "cashier"
+                    ? "Cashier work queue"
+                    : "Customer requests",
+              "Demo tickets only. Status buttons update this temporary preview, not a real order.",
+              portalTable(["Task", "Details", "Status", "Action"], taskRows),
+            );
+          case "tables":
+            return portalPage(
+              "Waiter · table management",
+              "Example table statuses. Requests do not reach cafe staff.",
+              portalTable(
+                ["Table", "Status", "Customer request", "Action"],
+                portalState.tables.map((status, index) => [
+                  `Table ${index + 1}`,
+                  `<span class="portal-status">${escapeHtml(status)}</span>`,
+                  ["Water", "Bill", "Assistance", "VIP seating"][index],
+                  `<button class="portal-action" type="button" data-portal-action="table" data-table="${index}">Change status</button>`,
+                ]),
+              ),
+            );
+          case "billing":
+            return portalPage(
+              "Cashier · billing preview",
+              "Sample bills only. No payments, refunds or invoices are processed.",
+              portalTable(
+                ["Ticket", "Order type", "Sample total", "Action"],
+                [
+                  [
+                    "CS-031",
+                    "Pickup",
+                    "Rs 680",
+                    '<button class="portal-action" type="button" data-portal-action="bill">Mark preview paid</button>',
+                  ],
+                  [
+                    "CS-032",
+                    "Dine-in",
+                    "Rs 1,250",
+                    '<button class="portal-action" type="button" data-portal-action="bill">View preview bill</button>',
+                  ],
+                ],
+              ),
+            );
+          case "attendance":
+            return portalPage(
+              "Staff attendance",
+              "Clock actions only change the current page preview; they are not recorded by the cafe.",
+              `${portalKpis([
+                [
+                  "Today's shift",
+                  portalState.attendanceClockedIn
+                    ? "In progress"
+                    : "Not started",
+                ],
+                [
+                  "Hours today",
+                  portalState.attendanceClockedIn ? "Timer running" : "0.0",
+                ],
+                ["Schedule", "Not configured"],
+                ["Attendance record", "Demo only"],
+              ])}<button class="button button-primary button-small" type="button" data-portal-action="attendance">${portalState.attendanceClockedIn ? "Clock out (preview)" : "Clock in (preview)"}</button>`,
+            );
+          case "profile":
+            return portalPage(
+              "Staff profile",
+              "Sample staff account; no employee records are connected.",
+              '<div class="portal-grid"><div class="portal-panel"><h5>Work profile</h5><p>Demo Team Member<br />Role: ' +
+                escapeHtml(portalState.staffRole) +
+                '</p></div><div class="portal-panel"><h5>Assigned work</h5><p>Only tasks assigned to your role are displayed in the live staff system.</p></div></div>',
+            );
+          default:
+            return portalPage(
+              `Hello, ${portalState.staffRole} team`,
+              "Role-focused workspace. Staff previews never show owner settings or customer account records.",
+              `${portalKpis([
+                ["Open tasks", staffTasks().length],
+                ["Assigned role", portalState.staffRole],
+                ["Shift", "Sample shift"],
+                [
+                  "Attendance",
+                  portalState.attendanceClockedIn
+                    ? "Clocked in"
+                    : "Not clocked in",
+                ],
+              ])}<div class="portal-panel"><h5>Work securely</h5><p>Choose your staff role above to preview the limited tools for kitchen, waiter, delivery or cashier teams.</p></div>`,
+            );
+        }
+      }
+
+      function renderAdminPortal() {
+        const managerMode = portalState.managementRole === "manager";
+        const ownerMode = portalState.managementRole === "owner";
+        const menuRows = [...menuItems, ...portalState.menuItems].map(
+          (item) => [
+            escapeHtml(item.name),
+            escapeHtml(item.category),
+            `Rs ${money(item.price)}`,
+            '<span class="portal-status">Sample</span>',
+          ],
+        );
+        const inventoryRows = portalState.inventory.map((item) => [
+          escapeHtml(item.name),
+          `${escapeHtml(item.quantity)} ${escapeHtml(item.unit)}`,
+          `${escapeHtml(item.threshold)} ${escapeHtml(item.unit)}`,
+          item.quantity <= item.threshold
+            ? '<span class="portal-status">Low stock</span>'
+            : '<span class="portal-status">In stock</span>',
+        ]);
+        const sampleOrders = [
+          ["ZT-2041", "Demo Customer", "Rs 1,080", "Preparing"],
+          ["ZT-2042", "Demo Customer", "Rs 640", "Received"],
+          ["ZT-2043", "Demo Customer", "Rs 2,150", "Out for delivery"],
+        ];
+        const sampleReservations = [
+          ["RS-031", "Demo Guest", "Today · 7:00 PM", "4 guests", "Pending"],
+          ["RS-032", "Demo Guest", "Today · 8:00 PM", "2 guests", "Approved"],
+        ];
+        switch (portalState.tab) {
+          case "sales":
+            return managerMode
+              ? portalPage(
+                  "Sales & reports",
+                  "Illustrative figures only; no live financial records are connected.",
+                  `${portalKpis([
+                    ["Today", "Rs 42,800"],
+                    ["This week", "Rs 286,400"],
+                    ["This month", "Rs 1.08M"],
+                    ["Orders", "86 sample"],
+                  ])}<div class="portal-panel"><h5>Sample sales trend</h5><p>Mon ▮▮▮▮ · Tue ▮▮▮ · Wed ▮▮▮▮▮ · Thu ▮▮ · Fri ▮▮▮▮</p></div>`,
+                )
+              : portalPage(
+                  "Sales & reports",
+                  "Sample figures; connected report exports and period filters require the live data layer.",
+                  `${portalKpis([
+                    ["Today", "Rs 42,800"],
+                    ["This week", "Rs 286,400"],
+                    ["This month", "Rs 1.08M"],
+                    ["Orders", "86 sample"],
+                  ])}<div class="portal-panel"><h5>Sample sales trend</h5><p>Daily · weekly · monthly · yearly reports and product analysis will appear here.</p></div>`,
+                );
+          case "menu":
+            return portalPage(
+              "Menu management",
+              "Example items are not the cafe's confirmed menu. Changes below stay in this page preview only.",
+              `${portalTable(["Item", "Category", "Sample price", "Record"], menuRows)}<form class="portal-form" data-portal-form="menu"><div class="field"><label for="portal-menu-name">New item name</label><input id="portal-menu-name" name="name" required maxlength="60" placeholder="Sample dish" /></div><div class="field"><label for="portal-menu-price">Price (PKR)</label><input id="portal-menu-price" name="price" required type="number" min="1" step="1" placeholder="e.g. 450" /></div><div class="field"><label for="portal-menu-category">Category</label><select id="portal-menu-category" name="category"><option>Breakfast</option><option>Snacks</option><option>Lunch & Dinner</option><option>Drinks</option><option>Desserts</option></select></div><div class="field"><label for="portal-menu-type">Food type</label><select id="portal-menu-type" name="type"><option>Veg</option><option>Non-veg</option></select></div><div class="field full"><button class="button button-primary button-small" type="submit">Add to preview menu</button></div></form>`,
+            );
+          case "orders":
+            return portalPage(
+              "Order management",
+              "Sample records only. Admins and managers can manage real order workflows after setup.",
+              portalTable(
+                ["Order", "Customer", "Sample total", "Status"],
+                sampleOrders.map(([id, customer, total, status]) => [
+                  id,
+                  customer,
+                  total,
+                  `<span class="portal-status">${status}</span>`,
+                ]),
+              ),
+            );
+          case "reservations":
+            return portalPage(
+              "Reservation management",
+              "Demo bookings are not real customer records.",
+              portalTable(
+                ["Reference", "Guest", "Time", "Party", "Status"],
+                sampleReservations.map(([id, name, time, party, status]) => [
+                  id,
+                  name,
+                  time,
+                  party,
+                  `<span class="portal-status">${status}</span>`,
+                ]),
+              ),
+            );
+          case "customers":
+            return managerMode
+              ? portalPage(
+                  "Customer privacy",
+                  "Manager accounts cannot access the customer database.",
+                  '<div class="portal-panel"><h5>Permission boundary</h5><p>Managers can work with orders and reports, but customer profile records are restricted to authorized admin access.</p></div>',
+                )
+              : portalPage(
+                  "Customer management",
+                  "Illustrative records only. Do not use these sample names as real customer information.",
+                  portalTable(
+                    ["Name", "Account", "Orders", "Rewards"],
+                    [
+                      ["Demo Customer A", "guest-a@example.test", "8", "240"],
+                      ["Demo Customer B", "guest-b@example.test", "3", "90"],
+                    ],
+                  ),
+                );
+          case "staff":
+            return portalPage(
+              "Staff & roles",
+              "Role examples only. Live role assignment is restricted to trusted, authenticated admin functions.",
+              portalTable(
+                ["Team member", "Role", "Access"],
+                [
+                  ["Demo Team Member A", "Kitchen", "Assigned orders only"],
+                  ["Demo Team Member B", "Waiter", "Tables & reservations"],
+                  ["Demo Team Member C", "Delivery", "Assigned deliveries"],
+                  ["Demo Team Member D", "Cashier", "Billing workflows"],
+                ],
+              ),
+            );
+          case "inventory":
+            return portalPage(
+              "Inventory & suppliers",
+              "Preview stock values only. Additions and quantities are held temporarily in this dashboard.",
+              `${portalTable(["Ingredient", "On hand", "Reorder at", "Status"], inventoryRows)}<form class="portal-form" data-portal-form="inventory"><div class="field"><label for="portal-stock-name">Ingredient</label><input id="portal-stock-name" name="name" required maxlength="50" placeholder="Ingredient name" /></div><div class="field"><label for="portal-stock-quantity">Quantity</label><input id="portal-stock-quantity" name="quantity" type="number" min="0" step="1" required placeholder="0" /></div><div class="field"><label for="portal-stock-unit">Unit</label><input id="portal-stock-unit" name="unit" required maxlength="12" placeholder="kg, L, pcs" /></div><div class="field"><label for="portal-stock-threshold">Low-stock alert at</label><input id="portal-stock-threshold" name="threshold" type="number" min="0" step="1" required placeholder="0" /></div><div class="field full"><button class="button button-primary button-small" type="submit">Add stock item to preview</button></div></form>`,
+            );
+          case "delivery":
+            return portalPage(
+              "Delivery management",
+              "Sample route and driver data. GPS and maps are not connected.",
+              portalTable(
+                ["Delivery", "Driver", "Status", "Route"],
+                [
+                  [
+                    "DL-102",
+                    "Demo Driver A",
+                    "Assigned",
+                    "Malkay Kalan · sample",
+                  ],
+                  ["DL-103", "Demo Driver B", "On the way", "Sialkot · sample"],
+                ],
+              ),
+            );
+          case "promotions":
+            return portalPage(
+              "Coupons & promotions",
+              "Preview codes do not apply to the public menu cart and are not saved.",
+              `${
+                portalState.coupons.length
+                  ? portalTable(
+                      ["Code", "Offer", "Status"],
+                      portalState.coupons.map((coupon) => [
+                        escapeHtml(coupon.code),
+                        escapeHtml(coupon.offer),
+                        '<span class="portal-status">Preview only</span>',
+                      ]),
+                    )
+                  : '<p class="portal-inline-note">No new sample coupon has been created in this preview.</p>'
+              }<form class="portal-form" data-portal-form="coupon"><div class="field"><label for="portal-coupon-code">Coupon code</label><input id="portal-coupon-code" name="code" required maxlength="24" placeholder="e.g. CHAI10" /></div><div class="field"><label for="portal-coupon-offer">Offer description</label><input id="portal-coupon-offer" name="offer" required maxlength="60" placeholder="e.g. 10% off sample" /></div><div class="field full"><button class="button button-primary button-small" type="submit">Create preview coupon</button></div></form>`,
+            );
+          case "security":
+            return managerMode
+              ? portalPage(
+                  "Restricted security center",
+                  "System settings and security monitoring are not available to manager accounts.",
+                  '<div class="portal-panel"><h5>Admin-only</h5><p>Admin access is required for security settings, login logs, and activity monitoring.</p></div>',
+                )
+              : portalPage(
+                  "Security center",
+                  "Sample control list only. Login logs, IP monitoring and OTP monitoring are not connected.",
+                  '<div class="portal-grid"><div class="portal-panel"><h5>Access controls</h5><p>Role-based access · App Check · server-side authorization</p></div><div class="portal-panel"><h5>Monitoring</h5><p>Login alerts · activity audit · failed login reports</p></div></div>',
+                );
+          case "insights":
+            return portalPage(
+              "AI business insights",
+              "Illustrative ideas only. No customer data or AI recommendation service is connected.",
+              '<div class="portal-grid"><div class="portal-panel"><h5>Popular sample</h5><p>Chicken biryani · based on demo menu</p></div><div class="portal-panel"><h5>Possible peak</h5><p>Evening · sample assumption, not measured data</p></div><div class="portal-panel"><h5>Customer trend</h5><p>Not available until real, consented data exists</p></div><div class="portal-panel"><h5>Forecast</h5><p>No forecast generated</p></div></div>',
+            );
+          default:
+            return portalPage(
+              `${ownerMode ? "Owner" : managerMode ? "Manager" : "Admin"} executive dashboard`,
+              `Business overview · sample figures only · ${managerMode ? "manager access excludes customer database and system security" : ownerMode ? "owner controls privileged role assignments" : "admin preview"}.`,
+              `${portalKpis([
+                ["Today's revenue", "Rs 42,800"],
+                ["Orders today", "86 sample"],
+                ["Reservations", "12 sample"],
+                ["Active staff", "8 sample"],
+              ])}<div class="portal-grid"><div class="portal-panel"><h5>Today's operations</h5><p>Orders · reservations · kitchen queue · delivery tasks</p></div><div class="portal-panel"><h5>Owner tools</h5><p>Menu · promotions · inventory · team access · security</p></div></div>`,
+            );
+        }
+      }
+
+      document
+        .getElementById("portal-tabs")
+        .addEventListener("click", (event) => {
+          const tab = event.target.closest("[data-portal-tab]");
+          if (!tab) return;
+          portalState.tab = tab.dataset.portalTab;
+          renderPortal();
+        });
+
+      document.getElementById("close-portal").addEventListener("click", () => {
+        document.getElementById("portal-dashboard").hidden = true;
+        document.querySelector("[data-open-auth]").focus();
+      });
+
+      document
+        .getElementById("portal-sign-out")
+        .addEventListener("click", async () => {
+          if (!window.ztramAuth?.configured) return;
+          try {
+            await window.ztramAuth.signOut();
+            portalState.authenticatedUser = null;
+            authUserRole = "";
+            authStaffRole = "";
+            document.getElementById("portal-dashboard").hidden = true;
+            showToast("You have signed out.");
+          } catch (error) {
+            console.error(
+              "Could not sign out of Firebase Authentication.",
+              error,
+            );
+            showToast("Sign-out failed. Please try again.");
+          }
+        });
+
+      document
+        .getElementById("portal-content")
+        .addEventListener("click", async (event) => {
+          const action = event.target.closest("[data-portal-action]");
+          if (action) {
+            if (action.dataset.portalAction === "reload-organization") {
+              delete portalState.organizationErrors[action.dataset.collection];
+              delete portalState.organizationRecords[action.dataset.collection];
+              renderPortal();
+              return;
+            }
+            if (action.dataset.portalAction === "payroll-status") {
+              try {
+                await window.ztramAuth.upsertPayrollRecord({
+                  recordId: action.dataset.id,
+                  status: action.dataset.status,
+                });
+                delete portalState.organizationRecords.payrollRecords;
+                showToast(
+                  action.dataset.status === "paid"
+                    ? "Payroll marked paid. No bank transfer was initiated."
+                    : "Payroll approved and audit logged.",
+                );
+                renderPortal();
+              } catch (error) {
+                console.error("Could not update payroll status.", error);
+                showToast(
+                  error.message || "Payroll status could not be updated.",
+                );
+              }
+              return;
+            }
+            if (action.dataset.portalAction === "password-reset") {
+              const user = portalState.authenticatedUser;
+              if (user?.email && window.ztramAuth?.configured) {
+                window.ztramAuth
+                  .sendPasswordReset(user.email)
+                  .then(() =>
+                    showToast(
+                      "If available, a password reset link has been sent.",
+                    ),
+                  )
+                  .catch((error) => {
+                    console.error("Password reset request failed.", error);
+                    showToast(
+                      "The reset request could not be sent. Try again later.",
+                    );
+                  });
+              }
+              return;
+            }
+            if (action.dataset.portalAction === "task") {
+              const id = action.dataset.task;
+              const steps =
+                portalState.staffRole === "kitchen"
+                  ? ["Received", "Preparing", "Cooking", "Packaging", "Ready"]
+                  : portalState.staffRole === "delivery"
+                    ? ["Assigned", "Accepted", "On the way", "Delivered"]
+                    : ["Open", "In progress", "Resolved"];
+              const current = portalState.taskStatuses[id] || steps[0];
+              const next = (steps.indexOf(current) + 1) % steps.length;
+              portalState.taskStatuses[id] = steps[next];
+              showToast("Sample task updated in this page preview only.");
+            } else if (action.dataset.portalAction === "attendance") {
+              portalState.attendanceClockedIn =
+                !portalState.attendanceClockedIn;
+              showToast(
+                "Preview attendance changed; no real record was saved.",
+              );
+            } else if (action.dataset.portalAction === "table") {
+              const index = Number(action.dataset.table);
+              const states = ["Available", "Occupied", "Reserved", "VIP"];
+              portalState.tables[index] =
+                states[
+                  (states.indexOf(portalState.tables[index]) + 1) %
+                    states.length
+                ];
+              showToast("Sample table status updated in this preview.");
+            } else {
+              showToast(
+                "Preview action only. No payment or staff action was sent.",
+              );
+            }
+            renderPortal();
+            return;
+          }
+          if (event.target.closest("[data-portal-reserve]")) {
+            openDialog("reservation-dialog");
+            return;
+          }
+          const authTab = event.target.closest("[data-portal-tab]");
+          if (authTab && portalState.authenticatedUser) {
+            portalState.tab = authTab.dataset.portalTab;
+            renderPortal();
+            return;
+          }
+          if (event.target.closest("[data-portal-shop]")) {
+            return;
+          }
+        });
+
+      document
+        .getElementById("portal-content")
+        .addEventListener("change", (event) => {
+          if (event.target.id !== "portal-account-role") return;
+          const isStaff = event.target.value === "staff";
+          const staffField = document.getElementById("portal-staff-role-field");
+          const managerPermissionsField = document.getElementById(
+            "portal-manager-permissions-field",
+          );
+          if (staffField) staffField.hidden = !isStaff;
+          if (managerPermissionsField) {
+            managerPermissionsField.hidden = event.target.value !== "manager";
+          }
+        });
+
+      document
+        .getElementById("portal-content")
+        .addEventListener("submit", async (event) => {
+          const form = event.target.closest("[data-portal-form]");
+          if (!form) return;
+          event.preventDefault();
+          const data = new FormData(form);
+          if (form.dataset.portalForm === "role-assignment") {
+            const role = String(data.get("role") || "");
+            try {
+              await window.ztramAuth.assignUserRole(
+                String(data.get("email") || "").trim(),
+                role,
+                role === "staff" ? String(data.get("staffRole") || "") : "",
+                role === "manager"
+                  ? data.getAll("managerPermissions").map(String)
+                  : [],
+              );
+              showToast(
+                "The account role was assigned. The user must sign out and back in to refresh access.",
+              );
+              form.reset();
+              const staffField = document.getElementById(
+                "portal-staff-role-field",
+              );
+              const managerPermissionsField = document.getElementById(
+                "portal-manager-permissions-field",
+              );
+              if (staffField) staffField.hidden = role !== "staff";
+              if (managerPermissionsField) {
+                managerPermissionsField.hidden = true;
+              }
+            } catch (error) {
+              console.error("Could not assign the account role.", error);
+              showToast(
+                error.message ||
+                  "The role assignment was rejected. Check your access and try again.",
+              );
+            }
+          } else if (form.dataset.portalForm === "menu-record") {
+            const item = Object.fromEntries(data.entries());
+            item.pricePkr = Number(item.pricePkr);
+            item.active = item.active === "true";
+            try {
+              await window.ztramAuth.upsertMenuItem(item);
+              delete portalState.organizationRecords.menuItems;
+              form.reset();
+              showToast("Menu item saved and audit logged.");
+              renderPortal();
+            } catch (error) {
+              console.error("Could not save the menu item.", error);
+              showToast(error.message || "The menu item could not be saved.");
+            }
+          } else if (form.dataset.portalForm === "organization-record") {
+            const recordType = form.dataset.recordType;
+            const record = Object.fromEntries(data.entries());
+            if (recordType === "payrollRecords") {
+              for (const key of ["grossPayPkr", "deductionsPkr"]) {
+                record[key] = Number(record[key]);
+              }
+              record.benefitsPkr = Number(record.benefitsPkr || 0);
+            }
+            try {
+              if (recordType === "payrollRecords") {
+                await window.ztramAuth.upsertPayrollRecord(record);
+              } else if (recordType === "attendance") {
+                await window.ztramAuth.adjustAttendance(record);
+              } else {
+                await window.ztramAuth.upsertHrRecord(recordType, record);
+              }
+              delete portalState.organizationRecords[recordType];
+              form.reset();
+              showToast(
+                recordType === "payrollRecords"
+                  ? "Payroll submitted for review. No statutory calculations were performed."
+                  : recordType === "attendance"
+                    ? "Attendance adjusted and audit logged."
+                    : "HR record saved and audit logged.",
+              );
+              renderPortal();
+            } catch (error) {
+              console.error(`Could not save ${recordType}.`, error);
+              showToast(error.message || "The record could not be saved.");
+            }
+          } else if (form.dataset.portalForm === "mfa-start") {
+            try {
+              portalState.mfaSecret =
+                await window.ztramAuth.startTotpEnrollment(
+                  String(data.get("password") || ""),
+                );
+              portalState.tab = "security";
+              renderPortal();
+            } catch (error) {
+              console.error("Could not start TOTP enrollment.", error);
+              showToast(
+                "Could not verify your password or start authenticator setup. Check Firebase Identity Platform and try again.",
+              );
+            }
+          } else if (form.dataset.portalForm === "menu") {
+            portalState.menuItems.push({
+              name: String(data.get("name")).trim(),
+              price: Number(data.get("price")),
+              category: String(data.get("category")),
+            });
+            showToast("Sample menu item added to this preview only.");
+          } else if (form.dataset.portalForm === "inventory") {
+            portalState.inventory.push({
+              name: String(data.get("name")).trim(),
+              quantity: Number(data.get("quantity")),
+              unit: String(data.get("unit")).trim(),
+              threshold: Number(data.get("threshold")),
+            });
+            showToast("Sample stock item added to this preview only.");
+          } else if (form.dataset.portalForm === "coupon") {
+            portalState.coupons.push({
+              code: String(data.get("code")).trim().toUpperCase(),
+              offer: String(data.get("offer")).trim(),
+            });
+            showToast("Sample coupon created in this preview only.");
+          } else if (form.dataset.portalForm === "mfa-enroll") {
+            const code = String(data.get("code") || "").trim();
+            if (!/^\d{6}$/.test(code) || !portalState.mfaSecret) {
+              showToast("Enter the current six-digit authenticator code.");
+              return;
+            }
+            try {
+              portalState.authenticatedUser =
+                await window.ztramAuth.finishTotpEnrollment(
+                  portalState.mfaSecret,
+                  code,
+                );
+              portalState.mfaSecret = null;
+              showToast("Multi-factor authentication is now enabled.");
+            } catch (error) {
+              console.error("Could not enroll the TOTP factor.", error);
+              showToast(
+                "Could not enable the authenticator. Check the code and try again.",
+              );
+            }
+          } else {
+            showToast("Support preview only. No ticket was submitted.");
+          }
+          renderPortal();
+        });
+
+      categoryList.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-category]");
+        if (!button) return;
+        selectedCategory = button.dataset.category;
+        renderCategories();
+        renderMenu();
+      });
+
+      searchInput.addEventListener("input", renderMenu);
+
+      grid.addEventListener("click", (event) => {
+        const addButton = event.target.closest("[data-add]");
+        if (addButton) {
+          addToCart(addButton.dataset.add);
+          return;
+        }
+
+        const favouriteButton = event.target.closest("[data-favourite]");
+        if (!favouriteButton) return;
+        const id = favouriteButton.dataset.favourite;
+        favourites = favourites.includes(id)
+          ? favourites.filter((favourite) => favourite !== id)
+          : [...favourites, id];
+        saveStorage(storageKeys.favourites, favourites);
+        renderMenu();
+      });
+
+      document
+        .getElementById("cart-items")
+        .addEventListener("click", (event) => {
+          const button = event.target.closest("[data-quantity]");
+          if (!button) return;
+          const line = cart.find(
+            (entry) => entry.id === button.dataset.quantity,
+          );
+          if (!line) return;
+          line.quantity += Number(button.dataset.change);
+          if (line.quantity <= 0)
+            cart = cart.filter((entry) => entry.id !== line.id);
+          saveStorage(storageKeys.cart, cart);
+          renderCart();
+        });
+
+      document.getElementById("open-cart").addEventListener("click", openCart);
+      document
+        .getElementById("close-cart")
+        .addEventListener("click", closeCart);
+      overlay.addEventListener("click", closeCart);
+
+      document.getElementById("apply-coupon").addEventListener("click", () => {
+        const code = document
+          .getElementById("coupon-input")
+          .value.trim()
+          .toUpperCase();
+        if (!code) {
+          couponApplied = false;
+          renderCart();
+          showToast("Enter a coupon code to try the preview.");
+          return;
+        }
+        if (code === "ZTRAM10" && cart.length) {
+          couponApplied = true;
+          renderCart();
+          showToast("Preview code applied: 10% off your item subtotal.");
+        } else {
+          couponApplied = false;
+          renderCart();
+          showToast("That preview code is not valid. Try ZTRAM10.");
+        }
+      });
+
+      document.querySelectorAll("[data-open-reservation]").forEach((button) => {
+        button.addEventListener("click", () =>
+          openDialog("reservation-dialog"),
+        );
+      });
+
+      document.querySelectorAll("[data-close-dialog]").forEach((button) => {
+        button.addEventListener("click", () =>
+          closeDialog(button.closest(".dialog-backdrop")),
+        );
+      });
+
+      document.querySelectorAll(".dialog-backdrop").forEach((backdrop) => {
+        backdrop.addEventListener("click", (event) => {
+          if (event.target === backdrop) closeDialog(backdrop);
+        });
+      });
+
+      document.getElementById("reservation-date").min = new Date()
+        .toISOString()
+        .slice(0, 10);
+
+      document
+        .getElementById("reservation-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const formData = new FormData(event.currentTarget);
+          const reservations = readStorage(storageKeys.reservations, []);
+          reservations.push({
+            name: formData.get("name"),
+            date: formData.get("date"),
+            time: formData.get("time"),
+            guests: formData.get("guests"),
+            seating: formData.get("seating"),
+            createdAt: new Date().toISOString(),
+          });
+          saveStorage(storageKeys.reservations, reservations);
+          event.currentTarget.reset();
+          closeDialog(document.getElementById("reservation-dialog"));
+          showToast(
+            "Preview booking saved on this device only. The cafe has not been notified.",
+          );
+        });
+
+      document
+        .getElementById("checkout-button")
+        .addEventListener("click", () => {
+          if (!cart.length) {
+            showToast("Add something to your cart first.");
+            return;
+          }
+          closeCart();
+          openDialog("checkout-dialog");
+        });
+
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const formData = new FormData(event.currentTarget);
+          const totals = getCartTotals();
+          const orders = readStorage(storageKeys.orders, []);
+          orders.push({
+            reference: `ZT-${Date.now().toString().slice(-6)}`,
+            items: cart.map(({ id, name, price, quantity }) => ({
+              id,
+              name,
+              price,
+              quantity,
+            })),
+            total: totals.total,
+            customer: formData.get("name"),
+            createdAt: new Date().toISOString(),
+            status: "Preview only",
+          });
+          saveStorage(storageKeys.orders, orders);
+          cart = [];
+          couponApplied = false;
+          saveStorage(storageKeys.cart, cart);
+          renderCart();
+          event.currentTarget.reset();
+          closeDialog(document.getElementById("checkout-dialog"));
+          showToast(
+            `Demo order ${orders[orders.length - 1].reference} saved on this device only. It was not sent to the cafe.`,
+          );
+        });
+
+      document
+        .getElementById("theme-toggle")
+        .addEventListener("click", (event) => {
+          document.body.classList.toggle("light");
+          const isLight = document.body.classList.contains("light");
+          event.currentTarget.setAttribute(
+            "aria-label",
+            isLight ? "Switch to dark theme" : "Switch to light theme",
+          );
+          event.currentTarget.textContent = isLight ? "☾" : "☼";
+          saveStorage(storageKeys.theme, isLight ? "light" : "dark");
+        });
+
+      const savedTheme = readStorage(storageKeys.theme, "dark");
+      if (savedTheme === "light") {
+        document.body.classList.add("light");
+        document.getElementById("theme-toggle").textContent = "☾";
+        document
+          .getElementById("theme-toggle")
+          .setAttribute("aria-label", "Switch to dark theme");
+      }
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const navigation = document.getElementById("primary-navigation");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation",
+        );
+        menuToggle.textContent = isOpen ? "×" : "☰";
+      });
+
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          navigation.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          menuToggle.textContent = "☰";
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") return;
+        if (drawer.classList.contains("open")) closeCart();
+        document.querySelectorAll(".dialog-backdrop.open").forEach(closeDialog);
+      });
+
+      renderCategories();
+      renderMenu();
+      renderCart();
+    </script>
+  </body>
+</html>

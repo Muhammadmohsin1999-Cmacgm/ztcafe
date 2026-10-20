@@ -1,0 +1,198 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null
+        && request.auth.token.get('email_verified', false) == true;
+    }
+
+    function role() {
+      return signedIn() ? request.auth.token.get('role', '') : '';
+    }
+
+    function staffRole() {
+      return signedIn() ? request.auth.token.get('staffRole', '') : '';
+    }
+
+    function isAdmin() {
+      return role() in ['admin', 'owner'];
+    }
+
+    function isManager() {
+      return role() == 'manager';
+    }
+
+    function hasManagerPermission(permission) {
+      return isManager()
+        && request.auth.token.get('managerPermissions', []).hasAny([permission]);
+    }
+
+    function isHR() {
+      return role() == 'hr';
+    }
+
+    function isAccountant() {
+      return role() == 'accountant';
+    }
+
+    function isStaff() {
+      return role() == 'staff';
+    }
+
+    function isOwner(userId) {
+      return signedIn() && request.auth.uid == userId;
+    }
+
+    match /profiles/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      allow create, delete: if false;
+      allow update: if isOwner(userId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'fullName',
+          'phone',
+          'addresses',
+          'photoPath',
+          'favoriteMenuItemIds',
+          'preferences',
+          'updatedAt'
+        ])
+        && request.resource.data.get('role', '') == resource.data.get('role', '')
+        && request.resource.data.get('rewardPoints', 0) == resource.data.get('rewardPoints', 0)
+        && request.resource.data.get('membershipLevel', 'bronze') == resource.data.get('membershipLevel', 'bronze');
+    }
+
+    match /staffDirectory/{staffId} {
+      allow get: if isOwner(staffId) || isAdmin() || isHR();
+      allow list: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /hiringCandidates/{recordId} {
+      allow read: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /interviews/{recordId} {
+      allow read: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /employeeRecords/{recordId} {
+      allow read: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /onboardingTasks/{recordId} {
+      allow read: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /offboardingTasks/{recordId} {
+      allow read: if isAdmin() || isHR();
+      allow write: if false;
+    }
+
+    match /payrollRecords/{recordId} {
+      allow read: if isAdmin() || isHR() || isAccountant();
+      allow write: if false;
+    }
+
+    match /menuItems/{itemId} {
+      allow get, list: if resource.data.get('active', false) == true
+        || isAdmin()
+        || hasManagerPermission('menu');
+      allow write: if false;
+    }
+
+    match /menuCategories/{categoryId} {
+      allow get, list: if resource.data.get('active', false) == true
+        || isAdmin()
+        || hasManagerPermission('menu');
+      allow write: if false;
+    }
+
+    match /orders/{orderId} {
+      allow get, list: if (signedIn() && resource.data.customerId == request.auth.uid)
+        || isAdmin()
+        || hasManagerPermission('orders')
+        || (isStaff() && staffRole() == 'cashier');
+      allow create, update, delete: if false;
+    }
+
+    match /staffOrders/{orderId} {
+      allow get, list: if isAdmin()
+        || hasManagerPermission('orders')
+        || (isStaff() && staffRole() in ['kitchen', 'waiter']);
+      allow write: if false;
+    }
+
+    match /reservations/{reservationId} {
+      allow get, list: if (signedIn() && resource.data.customerId == request.auth.uid)
+        || isAdmin()
+        || hasManagerPermission('reservations')
+        || (isStaff() && staffRole() == 'waiter');
+      allow create, update, delete: if false;
+    }
+
+    match /tables/{tableId} {
+      allow get, list: if isAdmin()
+        || hasManagerPermission('reservations')
+        || (isStaff() && staffRole() == 'waiter');
+      allow write: if false;
+    }
+
+    match /deliveries/{deliveryId} {
+      allow get, list: if isAdmin()
+        || hasManagerPermission('orders')
+        || (isStaff()
+          && staffRole() == 'delivery'
+          && resource.data.driverId == request.auth.uid);
+      allow write: if false;
+    }
+
+    match /inventory/{itemId} {
+      allow get, list: if isAdmin() || hasManagerPermission('inventory');
+      allow write: if false;
+    }
+
+    match /coupons/{code} {
+      allow get, list: if isAdmin();
+      allow write: if false;
+    }
+
+    match /loyaltyLedger/{entryId} {
+      allow get, list: if (signedIn() && resource.data.customerId == request.auth.uid)
+        || isAdmin();
+      allow write: if false;
+    }
+
+    match /attendance/{entryId} {
+      allow get, list: if isAdmin()
+        || hasManagerPermission('attendance')
+        || isHR()
+        || (isStaff() && resource.data.staffId == request.auth.uid);
+      allow write: if false;
+    }
+
+    match /supportTickets/{ticketId} {
+      allow get, list: if (signedIn() && resource.data.customerId == request.auth.uid)
+        || isAdmin();
+      allow write: if false;
+    }
+
+    match /auditLogs/{entryId} {
+      allow get, list: if isAdmin();
+      allow write: if false;
+    }
+
+    match /settings/{settingId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
